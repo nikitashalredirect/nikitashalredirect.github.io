@@ -9,7 +9,6 @@
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
      window.location = "tg://resolve?domain=" + l.pathname.slice(1);
-     window.open('','_self').close();
    }
   
   
