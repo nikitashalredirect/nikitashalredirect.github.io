@@ -28,7 +28,7 @@
               (l.pathname ? 'p=' + l.pathname.replace(/&/g, '~and~').replace(repo, '') : '') +
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
-     console.log(l)
+     console.log(l.pathname)
    }
 
    /* resolve 404 redirects into internal routes */
