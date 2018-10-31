@@ -21,7 +21,6 @@
 ;(function(l, projectPages) {
 
   var repo = projectPages ? '/' + l.pathname.split('/')[1] : ''
-  console.log(repo)
 
    /* redirect all 404 trafic to index.html */
    function redirect() {
@@ -29,6 +28,7 @@
               (l.pathname ? 'p=' + l.pathname.replace(/&/g, '~and~').replace(repo, '') : '') +
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
+     console.log(l)
    }
 
    /* resolve 404 redirects into internal routes */
