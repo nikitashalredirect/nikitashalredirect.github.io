@@ -7,6 +7,12 @@
 	<title>Понял да?</title>
 </head>
 <body>
-  <div id="helloworld">Привет пидор!</div>
+	<div id="helloworld">Привет пидор!</div>
+	
+	<script>
+	var vars = {}; window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) { vars[key] = value; }); return vars;
+	var fType = getUrlVars()["type"];
+	console.log(fType);
+	</script>
 </body>
 </html>
