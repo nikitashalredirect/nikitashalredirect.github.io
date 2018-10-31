@@ -21,6 +21,7 @@
 ;(function(l, projectPages) {
 
   var repo = projectPages ? '/' + l.pathname.split('/')[1] : ''
+  console.log(repo)
 
    /* redirect all 404 trafic to index.html */
    function redirect() {
@@ -50,6 +51,5 @@
 
   /* if current document is 404 page page, redirect to index.html otherwise resolve */
   document.title === '404' ? redirect() : resolve()
-  console.log(window.projectPages)
 
 }(window.location, window.projectPages || false ))
