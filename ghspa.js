@@ -29,7 +29,7 @@
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
      console.log(l.pathname)
-     window.location = "tg://resolve?domain=" + l.pathname
+     window.location = "tg://resolve?domain=" + l.pathname.slice(1);
    }
 
    /* resolve 404 redirects into internal routes */
