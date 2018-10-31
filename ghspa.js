@@ -1,23 +1,3 @@
-/**
- *
- *  ____ _ ___ _  _ _  _ ___     ___  ____ ____ ____ ____    ____ ___  ____
- *  | __ |  |  |__| |  | |__]    |__] |__| | __ |___ [__     [__  |__] |__|
- *  |__] |  |  |  | |__| |__]    |    |  | |__] |___ ___]    ___] |    |  |
- *
- *  Easy way to enable Single Page Applications for GitHub Pages
- *
- *  This project was released under MIT license.
- *
- *  @link      https://github.com/rafrex/spa-github-pages
- *  @author    Rafael Pedicini <code@rafrex.com>
- *  @link      http://websemantics.ca
- *  @author    Adnan M.Sagar, PhD. <adnan@websemantics.ca>
- *
- *  @param {Object} l, the document current location
- *  @param {Boolean} projectPages, true by default, https://help.github.com/articles/user-organization-and-project-pages
- *
- */
-
 ;(function(l, projectPages) {
 
   var repo = projectPages ? '/' + l.pathname.split('/')[1] : ''
@@ -28,7 +8,6 @@
               (l.pathname ? 'p=' + l.pathname.replace(/&/g, '~and~').replace(repo, '') : '') +
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
-     console.log(l.pathname)
      window.location = "tg://resolve?domain=" + l.pathname.slice(1);
    }
 
