@@ -47,8 +47,11 @@
         e.preventDefault();
     });
         
-    function updateCookie() {
-        setCookie('tglink', document.getElementsByClassName("getinput")[0].value)
+    function cookieMaster() {
+        if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
+            document.getElementsByClassName("notValid_not").classList.toggle('notValid');
+        }
+        setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
     }
     
 (function(l, projectPages) {
@@ -97,9 +100,9 @@
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
         <span class="input input--kyo">
-            <input class="getinput input__field input__field--kyo" type="text" id="input-19" oninput="updateCookie()">
+            <input class="getinput input__field input__field--kyo" type="text" id="input-19" oninput="cookieMaster()">
             <label class="input__label input__label--kyo" for="input-19">
-                <span class="input__label-content input__label-content--kyo">Укажите ссылку t.me/ или @username</span>
+                <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
             </label>
         </span>
     </div>
@@ -231,6 +234,15 @@
 
         .input__field--kyo:focus + .input__label--kyo::after {
             opacity: 1;
+        }
+        
+        .notValid{
+            color: red;
+            -webkit-transition: color 1s;
+            -moz-transition:    color 1s;
+            -ms-transition:     color 1s;
+            -o-transition:      color 1s;
+            transition:         color 1s;
         }
     </style>
 </body>
