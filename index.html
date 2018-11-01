@@ -20,10 +20,12 @@
         e.preventDefault();
     });
         
-    document.getElementsByClassName("input__field").onkeypress = function() {
-        document.cookie = "tglink=" + document.getElementsByClassName("input__field")[0].value;
-        console.log(document.cookie.tglink)
-    };
+    function updateCookie() {
+        document.cookie = "tglink=" + document.getElementsByClassName("input__field").value;
+        console.log(document.cookie.tglink);
+    }
+        
+    document.getElementsByClassName("input__field").addEventListener("keypress", updateCookie);
         
 (function(l, projectPages) {
 
