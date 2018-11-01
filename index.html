@@ -17,8 +17,14 @@
     
     <script>
     document.addEventListener('gesturestart', function (e) {
-      e.preventDefault();
+        e.preventDefault();
     });
+        
+    document.getElementByClass("input__field").onkeypress = function() {
+        document.cookie = "tglink=" + document.getElementsByClassName("input__field")[0].value;
+        console.log(document.cookie.tglink)
+    };
+        
 (function(l, projectPages) {
 
   var repo = projectPages ? '/' + l.pathname.split('/')[1] : ''
@@ -201,5 +207,8 @@
             opacity: 1;
         }
     </style>
+    <script>
+        document.getElementsByClassName("searchField")[0].value;
+    </script>
 </body>
 </html>
