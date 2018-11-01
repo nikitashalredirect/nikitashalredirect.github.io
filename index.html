@@ -50,10 +50,16 @@
     function cookieMaster() {
         console.log(document.getElementsByClassName("getinput")[0].value.charAt(0));
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
-            document.getElementById("notValid_not").classList.add('notValid');
+            var i;
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.backgroundColor = "#ff0033";
+            }
         }
         else {
-            document.getElementByClassid("notValid_not").classList.remove('notValid');
+            var i;
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.backgroundColor = "#6a7989";
+            }
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
     }
@@ -239,17 +245,13 @@
         .input__field--kyo:focus + .input__label--kyo::after {
             opacity: 1;
         }
-        
-        .notValid{
-            color: #ff0033;
+        .notValid_not {
+            color: #6a7989;
             -webkit-transition: color 1s;
             -moz-transition:    color 1s;
             -ms-transition:     color 1s;
             -o-transition:      color 1s;
             transition:         color 1s;
-        }
-        .notValid_not {
-            color: #6a7989;
         }
     </style>
 </body>
