@@ -49,7 +49,10 @@
         
     function cookieMaster() {
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
-            document.getElementsByClassName("notValid_not").classList.toggle('notValid');
+            document.getElementsByClassName("notValid_not").classList.add('notValid');
+        }
+        else {
+            document.getElementsByClassName("notValid_not").classList.remove('notValid');
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
     }
