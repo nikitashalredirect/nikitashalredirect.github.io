@@ -21,11 +21,11 @@
     });
         
     function updateCookie() {
-        document.cookie = "tglink=" + document.getElementsByClassName("input__field").value;
+        document.cookie = "tglink=" + document.getElementById("input__field").value;
         console.log(document.cookie.tglink);
     }
         
-    document.getElementsByClassName("input__field").addEventListener("keypress", updateCookie);
+    document.getElementById("input__field").addEventListener("keypress", updateCookie);
         
 (function(l, projectPages) {
 
@@ -73,7 +73,7 @@
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
         <span class="input input--kyo">
-            <input class="input__field input__field--kyo" type="text" id="input-19" />
+            <input class="input__field input__field--kyo" type="text" id="input-19 input__field" />
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку t.me/ или @username</span>
             </label>
