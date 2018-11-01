@@ -75,6 +75,15 @@
 <body>
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
+        <input type="text" id="demo">
+
+<script>
+document.getElementById("demo").addEventListener("keypress", myFunction);
+
+function myFunction() {
+    document.getElementById("demo").style.backgroundColor = "red";
+}
+</script>
         <span class="input input--kyo">
             <input class="input__field input__field--kyo" type="text" id="input-19" />
             <label class="input__label input__label--kyo" for="input-19">
@@ -212,14 +221,5 @@
             opacity: 1;
         }
     </style>
-<input type="text" id="demo">
-
-<script>
-document.getElementById("demo").addEventListener("keypress", myFunction);
-
-function myFunction() {
-    document.getElementById("demo").style.backgroundColor = "red";
-}
-</script>
 </body>
 </html>
