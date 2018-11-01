@@ -63,14 +63,6 @@
     </script>
 </head>
 <body>
-    <script>
-document.getElementById("demo").addEventListener("keypress", updateCookie);
-
-function updateCookie() {
-    document.cookie = "tglink=" + document.getElementsByClassName("getinput")[0].value;
-    console.log(document.getElementsByClassName("getinput")[0].value);
-}
-</script>
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
         <span class="input input--kyo">
@@ -80,6 +72,14 @@ function updateCookie() {
             </label>
         </span>
     </div>
+        <script>
+document.getElementById("demo").addEventListener("keypress", updateCookie);
+
+function updateCookie() {
+    document.cookie = "tglink=" + document.getElementsByClassName("getinput")[0].value;
+    console.log(document.getElementsByClassName("getinput")[0].value);
+}
+</script>
     <style>
         *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
         .clearfix:before, .clearfix:after { content: ''; display: table; }
