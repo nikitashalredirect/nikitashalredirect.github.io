@@ -21,10 +21,10 @@
     });
     
     window.onload=function(){
-        var el = document.getElementById('input-19');
+        var el = document.getElementById("input-19");
         el.addEventListener("keypress", updateCookie);
         function updateCookie() {
-            var ell = document.getElementById('input-19');
+            var ell = document.getElementById("input-19");
             document.cookie = "tglink=" + ell.value;
             console.log(ell.value);
         }
