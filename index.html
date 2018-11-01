@@ -47,6 +47,14 @@
         e.preventDefault();
     });
         
+    function isEmpty(obj) {
+        for(var key in obj) {
+            if(obj.hasOwnProperty(key))
+                return false;
+        }
+        return true;
+    }
+        
     function cookieMaster() {
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
             var i;
@@ -61,6 +69,11 @@
             }
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
+        if(isEmpty(document.getElementsByClassName("getinput")[0])) {
+            console.log('empty')
+        } else {
+            console.log('NOTempty')
+        }
     }
         
     function resetErrorStyle() {
