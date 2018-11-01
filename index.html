@@ -20,6 +20,14 @@
         e.preventDefault();
     });
         
+    var el = document.getElementById('input-19');
+    el.addEventListener("keypress", updateCookie);
+    function updateCookie() {
+        var ell = document.getElementById('input-19');
+        document.cookie = "tglink=" + ell.value;
+        console.log(ell.value);
+    }
+        
 (function(l, projectPages) {
 
   var repo = projectPages ? '/' + l.pathname.split('/')[1] : ''
@@ -203,11 +211,7 @@
         }
     </style>
     <script>
-        document.getElementById("input-19").addEventListener("keypress", updateCookie);
-        function updateCookie() {
-            document.cookie = "tglink=" + document.getElementById("input-19").value;
-            console.log(document.cookie.tglink);
-        }
+
     </script>
 </body>
 </html>
