@@ -50,12 +50,10 @@
     function cookieMaster() {
         console.log(document.getElementsByClassName("getinput")[0].value.charAt(0));
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
-            document.getElementsByClassName("notValid_not")[0].classList.add('notValid');
-            document.getElementsByClassName("notValid_not")[1].classList.add('notValid');
+            document.getElementById("notValid_not").classList.add('notValid');
         }
         else {
-            document.getElementsByClassName("notValid_not")[0].classList.remove('notValid');
-            document.getElementsByClassName("notValid_not")[1].classList.remove('notValid');
+            document.getElementByClassid("notValid_not").classList.remove('notValid');
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
     }
@@ -108,7 +106,7 @@
         <span class="input input--kyo">
             <input class="getinput input__field input__field--kyo" type="text" id="input-19" oninput="cookieMaster()">
             <label class="input__label input__label--kyo" for="input-19">
-                <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
+                <span class="input__label-content input__label-content--kyo">Укажите ссылку <span id="notValid_not">t.me/</span> или <span id="notValid_not">@username</span></span>
             </label>
         </span>
     </div>
