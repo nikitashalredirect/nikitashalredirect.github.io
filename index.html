@@ -16,7 +16,10 @@
     <title>Telegram GoTo⚡️</title>
     
     <script>
-;(function(l, projectPages) {
+    document.addEventListener('gesturestart', function (e) {
+      e.preventDefault();
+    });
+(function(l, projectPages) {
 
   var repo = projectPages ? '/' + l.pathname.split('/')[1] : ''
 
