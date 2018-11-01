@@ -52,13 +52,13 @@
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
             var i;
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                document.getElementsByClassName("notValid_not")[i].style.backgroundColor = "#ff0033";
+                document.getElementsByClassName("notValid_not")[i].style.color = "#ff0033";
             }
         }
         else {
             var i;
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                document.getElementsByClassName("notValid_not")[i].style.backgroundColor = "#6a7989";
+                document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
             }
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
