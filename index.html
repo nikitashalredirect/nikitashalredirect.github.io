@@ -48,6 +48,7 @@
     });
         
     function cookieMaster() {
+        console.log(document.getElementsByClassName("getinput")[0].value.charAt(0));
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
             document.getElementsByClassName("notValid_not")[0].classList.add('notValid');
             document.getElementsByClassName("notValid_not")[1].classList.add('notValid');
@@ -242,7 +243,7 @@
         }
         
         .notValid{
-            color: #cc0000;
+            color: #ff0033;
             -webkit-transition: color 1s;
             -moz-transition:    color 1s;
             -ms-transition:     color 1s;
