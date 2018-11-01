@@ -15,10 +15,15 @@
     <meta name="theme-color" content="#ffffff">
     <title>Telegram GoTo⚡️</title>
     
-    <script>
+    <script>    
+    document.document.getElementsByClassName("getinput")[0].value = document.cookie.tglink;
     document.addEventListener('gesturestart', function (e) {
         e.preventDefault();
     });
+        
+    function updateCookie() {
+        document.cookie = "tglink=" + document.getElementsByClassName("getinput")[0].value;
+    }
     
 (function(l, projectPages) {
 
@@ -72,12 +77,6 @@
             </label>
         </span>
     </div>
-        <script>
-        function updateCookie() {
-            document.cookie = "tglink=" + document.getElementsByClassName("getinput")[0].value;
-            console.log(document.getElementsByClassName("getinput")[0].value);
-        }
-        </script>
     <style>
         *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
         .clearfix:before, .clearfix:after { content: ''; display: table; }
