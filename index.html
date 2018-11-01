@@ -63,19 +63,11 @@
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
     }
         
-    document.getElementById('input-19').addEventListener('keydown', function (event) {
-        if (event.code == 'Delete' || event.code == 'Backspace' || event.key == 'Delete' || event.key == 'Backspace') {
-            if (document.getElementsByClassName("getinput")[0].value == '') {
-                var i;
-                for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                    document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
-                }
-            }
-        }
-    })
-        
     function resetErrorStyle() {
-        if (event.code == 'Delete' || event.code == 'Backspace' || event.key == 'Delete' || event.key == 'Backspace') {
+        var key = event.keyCode || event.charCode;
+
+        if( key == 8 || key == 46 ) {
+            return false;
             if (document.getElementsByClassName("getinput")[0].value == '') {
                 var i;
                 for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
@@ -131,7 +123,7 @@
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
         <span class="input input--kyo">
-            <input class="getinput input__field input__field--kyo" type="text" id="input-19" oninput="cookieMaster()">
+            <input class="getinput input__field input__field--kyo" type="text" id="input-19" oninput="cookieMaster()" onkeydown="resetErrorStyle">
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
             </label>
