@@ -64,15 +64,10 @@
     }
         
     function resetErrorStyle() {
-        var key = event.keyCode || event.charCode;
-
-        if( key == 8 || key == 46 ) {
-            return false;
-            if (document.getElementsByClassName("getinput")[0].value == '') {
-                var i;
-                for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                    document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
-                }
+        if (document.getElementsByClassName("getinput")[0].value == null) {
+            var i;
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
             }
         }
     }
