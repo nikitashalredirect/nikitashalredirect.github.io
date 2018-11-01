@@ -49,10 +49,12 @@
         
     function cookieMaster() {
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
-            document.getElementsByClassName("notValid_not")[0,1].classList.add('notValid');
+            document.getElementsByClassName("notValid_not")[0].classList.add('notValid');
+            document.getElementsByClassName("notValid_not")[1].classList.add('notValid');
         }
         else {
-            document.getElementsByClassName("notValid_not")[0,1].classList.remove('notValid');
+            document.getElementsByClassName("notValid_not")[0].classList.remove('notValid');
+            document.getElementsByClassName("notValid_not")[1].classList.remove('notValid');
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
     }
@@ -240,7 +242,7 @@
         }
         
         .notValid{
-            color: red;
+            color: #cc0000;
             -webkit-transition: color 1s;
             -moz-transition:    color 1s;
             -ms-transition:     color 1s;
