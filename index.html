@@ -17,13 +17,15 @@
     
     <script>
     function getCookie(cname) {
-        var pattern = RegExp(name + "=.[^;]*")
-        matched = document.cookie.match(pattern)
-        if(matched){
-            var cookie = matched[0].split('=')
-            return cookie[1]
+        var name = cn+"=";
+        var allCookie = decodeURIComponent(document.cookie).split(';');
+        var cval = [];
+        for(var i=0; i < allCookie.length; i++) {
+            if (allCookie[i].trim().indexOf(name) == 0) {
+                cval = allCookie[i].trim().split("=");
+            }   
         }
-        return false
+        return (cval.length > 0) ? cval[1] : "";
     }
         
     window.onload = (function () {
