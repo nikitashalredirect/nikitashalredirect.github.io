@@ -35,9 +35,7 @@
     }
 
     function setCookie(variable, value) {
-        var d = new Date();
-        d = new Date(d.getTime() + 1000 * expires_seconds);
-        document.cookie = variable + '=' + value + ';
+        document.cookie = variable + '=' + value + ';';
     }
         
     window.onload = (function () {
