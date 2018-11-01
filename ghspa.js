@@ -31,7 +31,7 @@
    }
 
   /* if current document is 404 page page, redirect to index.html otherwise resolve */
-  document.title === '404' ? redirect() : resolve()
+  document.title === 'TelegramGo' ? redirect() : resolve()
 
 
 }(window.location, window.projectPages || false ))
