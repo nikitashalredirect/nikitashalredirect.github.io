@@ -20,7 +20,7 @@
         e.preventDefault();
     });
         
-    document.getElementByClass("input__field").onkeypress = function() {
+    document.getElementByClassName("input__field").onkeypress = function() {
         document.cookie = "tglink=" + document.getElementsByClassName("input__field")[0].value;
         console.log(document.cookie.tglink)
     };
