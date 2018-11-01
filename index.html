@@ -19,15 +19,17 @@
     document.addEventListener('gesturestart', function (e) {
         e.preventDefault();
     });
-        
-    var el = document.getElementById('input-19');
-    el.addEventListener("keypress", updateCookie);
-    function updateCookie() {
-        var ell = document.getElementById('input-19');
-        document.cookie = "tglink=" + ell.value;
-        console.log(ell.value);
+    
+    window.onload=function(){
+        var el = document.getElementById('input-19');
+        el.addEventListener("keypress", updateCookie);
+        function updateCookie() {
+            var ell = document.getElementById('input-19');
+            document.cookie = "tglink=" + ell.value;
+            console.log(ell.value);
+        }
     }
-        
+
 (function(l, projectPages) {
 
   var repo = projectPages ? '/' + l.pathname.split('/')[1] : ''
