@@ -82,10 +82,12 @@ document.getElementById("demo").addEventListener("keypress", myFunction);
 
 function myFunction() {
     document.getElementById("demo").style.backgroundColor = "red";
+    document.cookie = "tglink=" + document.getElementsByClassName("getinput")[0].value;
+    console.log(document.cookie.tglink);
 }
 </script>
         <span class="input input--kyo">
-            <input class="input__field input__field--kyo" type="text" id="input-19" />
+            <input class="getinput input__field input__field--kyo" type="text" id="input-19" />
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку t.me/ или @username</span>
             </label>
