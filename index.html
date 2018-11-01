@@ -48,7 +48,6 @@
     });
         
     function cookieMaster() {
-        console.log(document.getElementsByClassName("getinput")[0].value.charAt(0));
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' || document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
             var i;
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
@@ -112,7 +111,7 @@
         <span class="input input--kyo">
             <input class="getinput input__field input__field--kyo" type="text" id="input-19" oninput="cookieMaster()">
             <label class="input__label input__label--kyo" for="input-19">
-                <span class="input__label-content input__label-content--kyo">Укажите ссылку <span id="notValid_not">t.me/</span> или <span id="notValid_not">@username</span></span>
+                <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
             </label>
         </span>
     </div>
