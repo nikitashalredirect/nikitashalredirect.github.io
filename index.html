@@ -203,12 +203,11 @@
         }
     </style>
     <script>
+        document.getElementById("input__field").addEventListener("keypress", updateCookie);
         function updateCookie() {
             document.cookie = "tglink=" + document.getElementById("input__field").value;
             console.log(document.cookie.tglink);
         }
-
-        document.getElementById("input__field").addEventListener("keypress", updateCookie);
     </script>
 </body>
 </html>
