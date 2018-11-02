@@ -79,12 +79,10 @@
                 }
             }
             if(document.getElementsByClassName("getinput")[0].value.length >= 3) {
-                document.getElementsByClassName("btn_getLink")[0].classList.remove("btn_getLinkHide");
                 document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkShow");
                 console.log('more than 3');
             }
             else {
-                document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkHide");
                 document.getElementsByClassName("btn_getLink")[0].classList.remove("btn_getLinkShow");
                 console.log('less than 3');
             }
@@ -100,7 +98,6 @@
                     document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
                 }
             }
-            document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkHide");
             document.getElementsByClassName("btn_getLink")[0].classList.remove("btn_getLinkShow");
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
@@ -342,14 +339,11 @@
         .btn_getLink {
           transform: scaleY(0);
           transform-origin: top;
+          margin-top: 15px;
         }
         
         .btn_getLinkShow {
             animation: grow-top cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
-        }
-        
-        .btn_getLinkHide {
-            animation: grow-top cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.7s backwards;
         }
     </style>
 </body>
