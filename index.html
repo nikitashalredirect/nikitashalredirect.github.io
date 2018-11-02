@@ -131,6 +131,19 @@
             }
         }
     }
+        
+    function createLink() {
+        var currentLink = document.getElementsByClassName("getinput")[0].value;
+        if (document.getElementsByClassName("getinput")[0].value.charAt(0) === '@') {
+            document.getElementsByClassName("getinput")[0].value = 'tdo.to/' + currentLink.slice(1);
+        }
+        if (document.getElementsByClassName("getinput")[0].value.charAt(0) === 'h') {
+            
+        }
+        if (document.getElementsByClassName("getinput")[0].value.charAt(0) === 't') {
+            
+        }
+    }
     
 (function(l, projectPages) {
 
@@ -186,7 +199,7 @@
         </span>
         </div>
         <div class="box">
-            <button class="btn_getLink">Получить ссылку</button>
+            <button onclick="createLink" class="btn_getLink">Получить ссылку</button>
         </div>
     </div>
     <style>
