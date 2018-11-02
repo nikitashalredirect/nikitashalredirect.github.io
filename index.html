@@ -41,6 +41,11 @@
     window.onload = (function () {
         var currentCookie = getCookie('tglink');
         document.getElementsByClassName("getinput")[0].value = currentCookie;
+        if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#ff0033";
+            }
+        }
     });
     
     document.addEventListener('gesturestart', function (e) {
