@@ -63,32 +63,32 @@
             }
         }
         else {
-            var i;
-            if (document.activeElement == document.getElementsByClassName("getinput")[0]) {                
-                for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                    document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
-                }
-            }
-            else {
-                for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                    document.getElementsByClassName("notValid_not")[i].style.color = "#fff";
-                }
+            var i;             
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
             }
         }
         if(isEmpty(document.getElementsByClassName("getinput")[0].value)) {
             var i;
-            if (document.activeElement == document.getElementsByClassName("getinput")[0]) {
-                for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                    document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
-                }
-            }
-            else {
-                for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                    document.getElementsByClassName("notValid_not")[i].style.color = "#fff";
-                }
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
             }
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
+    }
+        
+    function colorState() {
+        var i;
+        if (document.activeElement == input) {
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
+            }
+        }
+        else {
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#fff";
+            }
+        }
     }
     
 (function(l, projectPages) {
@@ -137,7 +137,7 @@
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
         <span class="input input--kyo">
-            <input class="getinput input__field input__field--kyo" type="text" id="input-19" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <input class="getinput input__field input__field--kyo" type="text" id="input-19" onchange="colorState()" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
             </label>
