@@ -39,7 +39,6 @@
     }
         
     window.onload = (function () {
-        //new ClipboardJS('.btn_getLink');
         var currentCookie = getCookie('tglink');
         document.getElementsByClassName("getinput")[0].value = currentCookie;
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't' && !isEmpty(document.getElementsByClassName("getinput")[0].value)) {
@@ -142,6 +141,7 @@
                     return document.getElementsByClassName("getinput")[0];
                 }
             });
+            document.getElementsByClassName("getinput")[0].blur();
         }
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) === 'h') {
             
