@@ -220,6 +220,9 @@
     <div onmouseover="containerSlideUp()" onmouseleave="containerSlideDown()" class="aboutLink">
         ?
     </div>
+    <div class="sayHello">
+        Хочешь узнать подробнее
+    </div>
     <style>
         *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
         .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -247,10 +250,10 @@
             overflow: hidden;
             height:100%;   
             box-shadow: -4px 2px 20px 2px grey;
-              -webkit-transition: margin 0.2s ease-in-out;
-                 -moz-transition: margin 0.2s ease-in-out;
-                   -o-transition: margin 0.2s ease-in-out;
-                      transition: margin 0.2s ease-in-out;
+              -webkit-transition: margin 0.25s ease-in-out;
+                 -moz-transition: margin 0.25s ease-in-out;
+                   -o-transition: margin 0.25s ease-in-out;
+                      transition: margin 0.25s ease-in-out;
         }
         
         .aboutLink {
@@ -260,6 +263,17 @@
             margin-left: auto;
             left: 50%;
             transform: translate(-50%, 0);
+            cursor: pointer;
+        }
+        
+        .sayHello {
+            position: absolute;
+            bottom: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            left: 50%;
+            transform: translate(-50%, 0);
+            cursor: pointer;
         }
         
         .input {
@@ -394,10 +408,10 @@
         }
         
         .transitionContainer {
-          -webkit-transition: margin 0.2s ease-in-out;
-             -moz-transition: margin 0.2s ease-in-out;
-               -o-transition: margin 0.2s ease-in-out;
-                  transition: margin 0.2s ease-in-out;
+          -webkit-transition: margin 0.25s ease-in-out;
+             -moz-transition: margin 0.25s ease-in-out;
+               -o-transition: margin 0.25s ease-in-out;
+                  transition: margin 0.25s ease-in-out;
             margin-top: -55px;
         }
     </style>
