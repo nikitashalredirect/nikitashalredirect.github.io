@@ -42,6 +42,7 @@
             <div class="credits">
                 По всем вопросам: <a href="https://tgo.to/nikitashal">tgo.to/nikitashal</a> с хаштегом #digitalresistance
             </div>
+          <br>
           <div class="rootLink" onclick="goRoot()">
               <- на главную
           </div>
@@ -98,6 +99,13 @@
         
         .containerFadeOut {
             animation: fade-out-right ease-in-out 0.7s forwards;
+        }
+        
+        .rootLink {
+            opacity: 0;
+            animation: fade-in-top ease 0.5s forwards;
+            animation-delay: 1s;
+            margin-left: 7px;
         }
                                                                                                                    
         @keyframes fade-in-right {
