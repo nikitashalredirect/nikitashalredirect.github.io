@@ -155,6 +155,10 @@
     function containerSlideUp() {
         document.getElementsByClassName("container")[0].classList.add("transitionContainer");
     }
+        
+    function containerSlideDown() {
+        document.getElementsByClassName("container")[0].classList.remove("transitionContainer");
+    }
     
 (function(l, projectPages) {
 
@@ -213,7 +217,7 @@
             <button onclick="createLink()" class="btn_getLink">Получить ссылку</button>
         </div>
     </div>
-    <div onmouseover="containerSlideUp()" class="aboutLink">
+    <div onmouseover="containerSlideUp()" onmouseleave="containerSlideDown()" class="aboutLink">
         ?
     </div>
     <style>
@@ -243,6 +247,10 @@
             overflow: hidden;
             height:100%;   
             box-shadow: -4px 2px 20px 2px grey;
+              -webkit-transition: margin 0.2s ease-in-out;
+                 -moz-transition: margin 0.2s ease-in-out;
+                   -o-transition: margin 0.2s ease-in-out;
+                      transition: margin 0.2s ease-in-out;
         }
         
         .aboutLink {
@@ -386,10 +394,10 @@
         }
         
         .transitionContainer {
-          -webkit-transition: margin 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
-             -moz-transition: margin 0.3s ease-out;  /* Firefox 4-15 */
-               -o-transition: margin 0.3s ease-out;  /* Opera 10.50–12.00 */
-                  transition: margin 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+          -webkit-transition: margin 0.2s ease-in-out;
+             -moz-transition: margin 0.2s ease-in-out;
+               -o-transition: margin 0.2s ease-in-out;
+                  transition: margin 0.2s ease-in-out;
             margin-top: -55px;
         }
     </style>
