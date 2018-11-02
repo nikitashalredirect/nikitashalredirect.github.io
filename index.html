@@ -174,7 +174,7 @@
     function goAbout() {
         document.getElementsByClassName("container")[0].style.marginTop = "-200%";
         document.getElementsByClassName("sayHello")[0].style.bottom = "-20";
-        document.getElementsByClassName("aboutLink")[0].style.marginTop = "-200%";
+        document.getElementsByClassName("aboutLink")[0].style.bottom = "110%";
         setTimeout(function(){window.location.assign("http://tgo.to/about");}, 520);  
     }
     
@@ -283,10 +283,10 @@
             transform: translate(-50%, 0);
             cursor: pointer;
             color: #6a7989;
-            -webkit-transition: margin 0.5s ease-in-out;
-             -moz-transition: margin 0.5s ease-in-out;
-               -o-transition: margin 0.5s ease-in-out;
-                  transition: margin 0.5s ease-in-out;
+            -webkit-transition: bottom 0.5s ease-in-out;
+             -moz-transition: bottom 0.5s ease-in-out;
+               -o-transition: bottom 0.5s ease-in-out;
+                  transition: bottom 0.5s ease-in-out;
         }
         
         .sayHello {
