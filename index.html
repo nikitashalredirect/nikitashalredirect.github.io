@@ -141,7 +141,7 @@
                     return document.getElementsByClassName("getinput")[0];
                 }
             });
-            setTimeout(document.getElementsByClassName("getinput")[0].blur();, 100);
+            setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 100);
         }
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) === 'h') {
             
