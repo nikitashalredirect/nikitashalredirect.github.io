@@ -325,7 +325,7 @@
             transition:         color 0.3s;
         }
         
-        @keyframes grow-left {
+        @keyframes grow-top {
           from {
             transform: scaleY(0);
           }
@@ -337,7 +337,10 @@
         .btn_getLink {
           transform: scaleY(0);
           transform-origin: top;
-          animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+        }
+        
+        btn_getLinkShow {
+            animation: grow-top cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
         }
     </style>
 </body>
