@@ -80,11 +80,13 @@
     function colorState() {
         var i;
         if (document.activeElement == input) {
+            console.log('yep')
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
                 document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
             }
         }
         else {
+            console.log('nope')
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
                 document.getElementsByClassName("notValid_not")[i].style.color = "#fff";
             }
