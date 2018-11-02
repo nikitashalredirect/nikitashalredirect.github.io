@@ -15,6 +15,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Telegram GoTo About⚡️</title>
+    
+    <script>
+        function goRoot(){
+            document.getElementsByClassName("container")[0].animate(fade-out-right); 
+        }
+    </script>
 </head>
   <body>
     <div class="container">
@@ -35,6 +41,9 @@
             <div class="credits">
                 По всем вопросам: <a href="https://tgo.to/nikitashal">tgo.to/nikitashal</a> с хаштегом #digitalresistance
             </div>
+          <div class="rootLink" onclick="goRoot()">
+              <- на главную
+          </div>
       </div>
     </div>
     <style>
@@ -104,6 +113,16 @@
           to {
             opacity: 1;
             transform: translateY(0);
+          }
+        }
+        @keyframes fade-out-right {
+          from {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateX(-130%);
           }
         }
         @media only screen and (max-width: 400px) {
