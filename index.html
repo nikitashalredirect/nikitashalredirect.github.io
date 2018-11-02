@@ -154,11 +154,15 @@
             setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 10);
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
-        if (document.getElementsByClassName("getinput")[0].value.charAt(0) === 'h') {
-            
-        }
-        if (document.getElementsByClassName("getinput")[0].value.charAt(0) === 't') {
-            
+        else {
+            document.getElementsByClassName("getinput")[0].value = 'tgo.to/' + URL(currentLink).pathname;
+            var clipboard = new ClipboardJS('.btn_getLink', {
+                target: function() {
+                    return document.getElementsByClassName("getinput")[0];
+                }
+            });
+            setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 10);
+            setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
     }
         
