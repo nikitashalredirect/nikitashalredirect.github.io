@@ -151,6 +151,10 @@
             
         }
     }
+        
+    containerSlideUp() {
+        document.getElementsByClassName("container")[0].classList.add("transitionContainer");
+    }
     
 (function(l, projectPages) {
 
@@ -209,7 +213,7 @@
             <button onclick="createLink()" class="btn_getLink">Получить ссылку</button>
         </div>
     </div>
-    <div class="aboutLink">
+    <div onmouseover="containerSlideUp()" class="aboutLink">
         ?
     </div>
     <style>
@@ -379,6 +383,14 @@
         
         .btn_getLinkShow {
             animation: grow-top cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+        }
+        
+        .transitionContainer {
+            -webkit-transition: top 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+             -moz-transition: top 0.3s ease-out;  /* Firefox 4-15 */
+               -o-transition: top 0.3s ease-out;  /* Opera 10.50–12.00 */
+                  transition: top 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+            margin-top: -55px:
         }
     </style>
 </body>
