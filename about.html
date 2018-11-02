@@ -27,7 +27,7 @@
                   <i>Зачем?</i> - Я за удобный интернет и свободу слова.
                 </p>
                 <p>
-                  <i>Есть аналоги. Чем tgo.to лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в телеграм.
+                  <i>Есть аналоги. Чем <link href="https://tgo.to">tgo.to</link> лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в телеграм. 
                 </p>
             </div>
       </div>
@@ -71,7 +71,7 @@
             opacity: 0;
             animation: fade-in-right ease 0.4s forwards;
             animation-delay: 0.5s;
-            margin-left: 25px;
+            margin-left: 7px;
         }
                                                                                                                    
         @keyframes fade-in-right {
@@ -84,12 +84,14 @@
             transform: translateX(0);
           }
         }
-        @keyframes grow-left {
+        @keyframes fade-in-top {
           from {
-            transform: scaleX(0);
+            opacity: 0;
+            transform: translateY(-15px);
           }
           to {
-            transform: scaleX(1);
+            opacity: 1;
+            transform: translateY(0);
           }
         }
     </style>
