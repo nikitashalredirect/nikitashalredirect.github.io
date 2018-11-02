@@ -68,7 +68,7 @@
             }
         }
         if(isEmpty(document.getElementsByClassName("getinput")[0].value)) {
-            if (document.getElementsByClassName("getinput")[0].hasFocus) {
+            if (document.activeElement === document.getElementsByClassName("getinput")[0]) {
                 for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
                     document.getElementsByClassName("notValid_not")[i].style.color = "#fff";
                 }
