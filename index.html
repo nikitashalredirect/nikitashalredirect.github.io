@@ -78,6 +78,12 @@
                     document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
                 }
             }
+            if(document.getElementsByClassName("getinput")[0].length >= 3) {
+                document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkShow");
+            }
+            else {
+                document.getElementsByClassName("btn_getLink")[0].classList.remove("btn_getLinkShow");
+            }
         }
         if(isEmpty(document.getElementsByClassName("getinput")[0].value)) {
             if (document.activeElement === document.getElementsByClassName("getinput")[0]) {
@@ -90,6 +96,7 @@
                     document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
                 }
             }
+            document.getElementsByClassName("btn_getLink")[0].classList.remove("btn_getLinkShow");
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
     }
@@ -320,14 +327,14 @@
         
         @keyframes grow-left {
           from {
-            transform: scaleX(0);
+            transform: scaleY(0);
           }
           to {
-            transform: scaleX(1);
+            transform: scaleY(1);
           }
         }
         
-        .btn_getLink {
+        .btn_getLinkShow {
           transform: scaleX(0);
           transform-origin: left;
           animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
