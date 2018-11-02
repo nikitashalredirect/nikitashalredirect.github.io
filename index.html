@@ -46,6 +46,9 @@
                 document.getElementsByClassName("notValid_not")[i].style.color = "#ff0033";
             }
         }
+        if(document.getElementsByClassName("getinput")[0].value.length >= 3) {
+            document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkShow");
+        }
     });
     
     document.addEventListener('gesturestart', function (e) {
@@ -80,11 +83,9 @@
             }
             if(document.getElementsByClassName("getinput")[0].value.length >= 3) {
                 document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkShow");
-                console.log('more than 3');
             }
             else {
                 document.getElementsByClassName("btn_getLink")[0].classList.remove("btn_getLinkShow");
-                console.log('less than 3');
             }
         }
         if(isEmpty(document.getElementsByClassName("getinput")[0].value)) {
