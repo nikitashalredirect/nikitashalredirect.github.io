@@ -173,7 +173,9 @@
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
             </label>
         </span>
+        <span>
         <button class="getLink">Получить ссылку</button>
+        </span>
     </div>
     <style>
         *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -202,13 +204,10 @@
             height:100%;
         }
         
-        span {
-            display:block;
-        }
-        
         .input {
             position: relative;
             z-index: 1;
+            display:block;
             margin: 1em;
             max-width: 400px;
             width: calc(100% - 2em);
