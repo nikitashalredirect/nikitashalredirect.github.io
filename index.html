@@ -68,8 +68,15 @@
             }
         }
         if(isEmpty(document.getElementsByClassName("getinput")[0].value)) {
-            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
-                document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
+            if (document.getElementsByClassName("getinput")[0].hasFocus == true) {
+                for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                    document.getElementsByClassName("notValid_not")[i].style.color = "#fff";
+                }
+            }
+            else {
+                for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                    document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
+                }
             }
         }
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
