@@ -154,12 +154,12 @@
         
     function containerSlideUp() {
         document.getElementsByClassName("container")[0].classList.add("transitionContainer");
-        document.getElementsByClassName("container")[0].classList.add("transitionSayHello");
+        document.getElementsByClassName("sayHello")[0].classList.add("transitionSayHello");
     }
         
     function containerSlideDown() {
         document.getElementsByClassName("container")[0].classList.remove("transitionContainer");
-        document.getElementsByClassName("container")[0].classList.add("transitionSayHello");
+        document.getElementsByClassName("sayHello")[0].classList.add("transitionSayHello");
     }
     
 (function(l, projectPages) {
@@ -272,7 +272,7 @@
             position: absolute;
             bottom: -20px;
             margin-right: auto;
-            margin-left: auto;
+            margin-left: -105px;
             left: 50%;
             transform: translate(-50%, 0);
             cursor: pointer;
