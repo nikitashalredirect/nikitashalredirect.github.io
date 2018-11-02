@@ -179,6 +179,18 @@
             setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 10);
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
+        if (currentLink.startsWith("tgo.go/")) {
+            var l = 'https://' + currentLink;
+            l = new URL(l).pathname
+            document.getElementsByClassName("getinput")[0].value = 'tgo.to' + l;
+            var clipboard = new ClipboardJS('.btn_getLink', {
+                target: function() {
+                    return document.getElementsByClassName("getinput")[0];
+                }
+            });
+            setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 10);
+            setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
+        }
         clipboard.on('success', function() {
             document.getElementsByClassName("input__label-content")[0].innerHTML = "Ссылка скопирована в буфер обмена";
             document.getElementsByClassName("input__label-content")[0].style.color = "#4BB543";
