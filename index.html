@@ -176,7 +176,7 @@
         </span>
         </div>
         <div class="box">
-            <p>test</p>
+            <button class="btn_getLink">Получить ссылку</button>
         </div>
     </div>
     <style>
@@ -316,6 +316,22 @@
             -ms-transition:     color 0.3s;
             -o-transition:      color 0.3s;
             transition:         color 0.3s;
+        }
+        
+        @keyframes grow-left {
+          from {
+            transform: scaleX(0);
+          }
+          to {
+            transform: scaleX(1);
+          }
+        }
+        
+        .btn_getLink {
+          transform: scaleX(0);
+          transform-origin: left;
+          animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+          animation-delay: 0.4s;
         }
     </style>
 </body>
