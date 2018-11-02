@@ -298,6 +298,13 @@
         .input__field--kyo:focus + .input__label--kyo::after {
             opacity: 1;
         }
+        input[type="search"] {
+            -webkit-appearance: textfield;
+        }
+
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
         .notValid_not {
             color: #6a7989;
             -webkit-transition: color 0.3s;
