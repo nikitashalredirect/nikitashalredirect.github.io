@@ -75,17 +75,30 @@
         setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
     }
         
-    function colorState() {
-        console.log('yep')
+    function colorTextGray() {
+        console.log('gray')
         var i;
-        if (document.getElementsByClassName("getinput")[0] === document.activeElement) {
-            console.log('yep')
+        if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#ff0033";
+            }
+        }
+        else {
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
                 document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
             }
         }
+    }
+        
+    function colorTextWhite() {
+        console.log('white')
+        var i;
+        if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
+            for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#ff0033";
+            }
+        }
         else {
-            console.log('nope')
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
                 document.getElementsByClassName("notValid_not")[i].style.color = "#fff";
             }
@@ -138,7 +151,7 @@
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
         <span class="input input--kyo">
-            <input class="getinput input__field input__field--kyo" type="text" id="input-19" onchange="colorState()" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <input class="getinput input__field input__field--kyo" type="text" id="input-19" onblur="colorTextGray()" onfocus="colorTextWhite()" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
             </label>
