@@ -179,6 +179,13 @@
             setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 10);
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
+        clipboard.on('success', function(e) {
+            console.info('yeh');
+            document.getElementsByClassName("input__label-content")[0].innerHTML = "Ссылка скопирована";
+            document.getElementsByClassName("input__label-content")[0].style.color = "#4BB543";
+            setTimeout(function(){document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span>";}, 1500);
+            setTimeout(function(){document.getElementsByClassName("input__label-content")[0].style.color = "#6a7989";}, 1500);
+        });
     }
         
     function containerSlideUp() {
