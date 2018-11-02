@@ -19,6 +19,7 @@
     <script>
         function goRoot(){
             document.getElementsByClassName("container")[0].classList.add("containerFadeOut");
+            setTimeout(function(){window.location.assign("http://tgo.to/");}, 520);
         }
     </script>
 </head>
@@ -96,7 +97,7 @@
         }
         
         .containerFadeOut {
-            animation: fade-out-right ease 0.5s forwards;
+            animation: fade-out-right ease-in-out 0.7s forwards;
         }
                                                                                                                    
         @keyframes fade-in-right {
