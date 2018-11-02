@@ -155,7 +155,8 @@
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
         else {
-            document.getElementsByClassName("getinput")[0].value = 'tgo.to/' + URL(currentLink).pathname;
+            var l = new URL(currentLink).pathname;
+            document.getElementsByClassName("getinput")[0].value = 'tgo.to/' + l;
             var clipboard = new ClipboardJS('.btn_getLink', {
                 target: function() {
                     return document.getElementsByClassName("getinput")[0];
