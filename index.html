@@ -90,7 +90,7 @@
         
     window.onload = (function () {
         var currentCookie = getCookie('tglink');
-        if (getCookie('lang') == null){
+        if (getCookie('lang') == ''){
             console.log('yeey');
         }
         document.getElementsByClassName("getinput")[0].value = currentCookie;
