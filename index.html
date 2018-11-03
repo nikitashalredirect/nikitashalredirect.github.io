@@ -89,11 +89,6 @@
         if(document.getElementsByClassName("getinput")[0].value.length >= 3) {
             document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkShow");
         }
-        var clipboard = new ClipboardJS('.btn_getLink', {
-            target: function() {
-                return document.getElementsByClassName("getinput")[0];
-            }
-        });
     });
     
     document.addEventListener('gesturestart', function (e) {
@@ -212,7 +207,7 @@
             setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 10);
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
-        if (currentLink.startsWith("tgo.go/")) {
+        if (currentLink.startsWith("tgo.to/")) {
             var l = 'https://' + currentLink;
             l = new URL(l).pathname
             document.getElementsByClassName("getinput")[0].value = 'tgo.to' + l;
