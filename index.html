@@ -91,7 +91,7 @@
     window.onload = (function () {
         var currentCookie = getCookie('tglink');
         if (getCookie('lang') == ''){
-            console.log('yeey');
+            setCookie('lang', 'eng');
         }
         document.getElementsByClassName("getinput")[0].value = currentCookie;
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't' && !isEmpty(document.getElementsByClassName("getinput")[0].value)) {
@@ -105,6 +105,18 @@
         if(document.getElementsByClassName("getinput")[0].value.startsWith("tgo.to/")) {
             document.getElementsByClassName("btn_goTestLink")[0].style.display = "block";
             document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";
+        }
+        if (getCookie('lang') == 'eng') {
+            document.getElementsByClassName("input__label-content")[0].innerHTML = "Enter link <span class='notValid_not'>t.me/</span> or <span class='notValid_not'>@username</span>";
+            document.getElementsByClassName("btn_getLink")[0].innerHTML = "Get link";
+            document.getElementsByClassName("sayHello")[0].innerHTML = "Want to learn more";
+            document.getElementsByClassName("btn_goTestLink")[0].innerHTML = "open";
+        }
+        if (getCookie('lang') == 'ru') {
+            document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class='notValid_not'>t.me/</span> или <span class='notValid_not'>@username</span>";
+            document.getElementsByClassName("btn_getLink")[0].innerHTML = "Получить ссылку";
+            document.getElementsByClassName("sayHello")[0].innerHTML = "Хочешь узнать подробнее";
+            document.getElementsByClassName("btn_goTestLink")[0].innerHTML = "открыть";
         }
     });
     
@@ -323,6 +335,7 @@
     <div class="container">
         <!– <iframe id="frameTg" src="" width="100%" height="" frameborder="0" scrolling="no" style="border: none; overflow: hidden; min-width: 320px; height: 179px;"></iframe>
         <div class="box">
+        <a class="btn_changeLang" onclick="changeLang()">ru</a>
         <span class="input input--kyo goTestLink">
             <a class="btn_goTestLink" onclick="goTestLink()">открыть</a>
             <input class="getinput input__field input__field--kyo" type="search" id="input-19" onblur="colorTextGray()" onfocus="colorTextWhite()" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
