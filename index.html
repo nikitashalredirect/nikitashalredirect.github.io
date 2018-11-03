@@ -89,6 +89,9 @@
         if(document.getElementsByClassName("getinput")[0].value.length >= 3) {
             document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkShow");
         }
+        if(document.getElementsByClassName("getinput")[0].value.startsWith("tgo.to/")) {
+            document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";
+        }
     });
     
     document.addEventListener('gesturestart', function (e) {
@@ -224,6 +227,7 @@
             document.getElementsByClassName("input__label-content")[0].style.color = "#4BB543";
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class='notValid_not'>t.me/</span> или <span class='notValid_not'>@username</span>";}, 2500);
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].style.color = "#6a7989";}, 2500);
+            document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";
         });
         clipboard.on('error', function() {
             document.getElementsByClassName("input__label-content")[0].innerHTML = "Ссылка не скопирована, скопируйте вручную";
@@ -249,6 +253,10 @@
         document.getElementsByClassName("sayHello")[0].style.bottom = "-20 !important";
         document.getElementsByClassName("aboutLink")[0].style.bottom = "110%";
         setTimeout(function(){window.location.assign("http://tgo.to/about");}, 450);  
+    }
+        
+    function goTestLink() {
+        window.location.assign(document.getElementsByClassName("getinput")[0].value);
     }
     
 (function(l, projectPages) {
@@ -298,7 +306,7 @@
     <div class="container">
         <div class="box">
         <span class="input input--kyo goTestLink">
-            <a class="btn_goTestLink">Перейти</a>
+            <a class="btn_goTestLink" onclick="goTestLink()">открыть</a>
             <input class="getinput input__field input__field--kyo" type="search" id="input-19" onblur="colorTextGray()" onfocus="colorTextWhite()" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
