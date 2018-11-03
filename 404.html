@@ -21,12 +21,12 @@
               (l.pathname ? 'p=' + l.pathname.replace(/&/g, '~and~').replace(repo, '') : '') +
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
-     if (l.pathname.sptil('/')[1] !== null) {
-        window.location = "tg://resolve?domain=" + l.pathname.slice(1) + '&post=' + l.pathname.sptil('/')[1];
-     }
-     else {
+    // if (l.pathname.sptil('/')[1] !== null) {
+     //   window.location = "tg://resolve?domain=" + l.pathname.slice(1) + '&post=' + l.pathname.sptil('/')[1];
+    // }
+    // else {
         window.location = "tg://resolve?domain=" + l.pathname.slice(1);
-     }
+   //  }
     // setTimeout(function(){ window.location.href = "/"; }, 200);
    }
   
