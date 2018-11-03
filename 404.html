@@ -21,9 +21,9 @@
               (l.pathname ? 'p=' + l.pathname.replace(/&/g, '~and~').replace(repo, '') : '') +
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
-     console.log(l.pathname.split('/')[1]);
-     if (l.pathname.split('/')[1] !== null) {
-        window.location = "tg://resolve?domain=" + l.pathname.slice(1) + '&post=' + l.pathname.split('/')[1];
+     console.log(l.pathname.split('/')[2]);
+     if (l.pathname.split('/')[2] !== null) {
+        window.location = "tg://resolve?domain=" + l.pathname.slice(1) + '&post=' + l.pathname.split('/')[2];
      }
      else {
         window.location = "tg://resolve?domain=" + l.pathname.slice(1);
