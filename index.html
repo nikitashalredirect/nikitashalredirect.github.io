@@ -297,7 +297,8 @@
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
         <div class="box">
-        <span class="input input--kyo">
+        <span class="input input--kyo right-addon inner-addon">
+            <i class="glyphicon glyphicon-search">kek</i>
             <input class="getinput input__field input__field--kyo" type="search" id="input-19" onblur="colorTextGray()" onfocus="colorTextWhite()" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
@@ -318,6 +319,25 @@
         *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
         .clearfix:before, .clearfix:after { content: ''; display: table; }
         .clearfix:after { clear: both; }
+        
+        .inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
         
         html, body {
             position: fixed;
