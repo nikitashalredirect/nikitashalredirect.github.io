@@ -107,6 +107,9 @@
     }
         
     function cookieMaster() {
+        if (document.activeElement === document.getElementsByClassName("getinput")[0]) {
+            document.getElementsByClassName("btn_goTestLink")[0].style.display = "none";
+        }
         var i;
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't') {
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
@@ -227,6 +230,7 @@
             document.getElementsByClassName("input__label-content")[0].style.color = "#4BB543";
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class='notValid_not'>t.me/</span> или <span class='notValid_not'>@username</span>";}, 2500);
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].style.color = "#6a7989";}, 2500);
+            document.getElementsByClassName("btn_goTestLink")[0].style.display = "block";
             document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";
         });
         clipboard.on('error', function() {
@@ -257,6 +261,7 @@
         
     function goTestLink() {
         window.location.assign(document.getElementsByClassName("getinput")[0].value.slice(7));
+        document.getElementsByClassName("aboutLink")[0].style.display = "none";
     }
     
 (function(l, projectPages) {
@@ -334,6 +339,7 @@
         .btn_goTestLink {
             position: absolute;
             padding: 8px;
+            display: none;
             font-size: 12px;
             right: 25px;
             z-index: 9999999999;
