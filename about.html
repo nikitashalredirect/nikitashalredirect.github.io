@@ -27,6 +27,26 @@
 
     
     <script>
+    window.onload = (function () {
+        if (getCookie('lang') == ''){
+            setCookie('lang', 'eng');
+        }
+        if (getCookie('lang') == 'eng') {
+            document.getElementsByClassName("m1")[0].innerHTML = "When t.me/ doesn't work - tgo.to/ works ";
+            document.getElementsByClassName("m2")[0].innerHTML = "<i>Why?</i> - This is more convenient than typing the login into telegrams manually.";
+            document.getElementsByClassName("m3")[0].innerHTML = "<i>There are analogues. How is <a href='https://tgo.to'>tgo.to</a> better?</i> - Analogues are forced to watch ads before switching to telegrams.";
+            document.getElementsByClassName("credits")[0].innerHTML = "Creator: <a href='https://tgo.to/cryptohumanbeing'>@cryptohumanbeing</a><br><br>For all questions:<br> <a href='https://tgo.to/nikitashal'>@nikitashal</a> with hashtag #digitalresistance";
+            document.getElementsByClassName("rootLink")[0].innerHTML = "<- to main page";
+        }
+        if (getCookie('lang') == 'ru') {
+            document.getElementsByClassName("m1")[0].innerHTML = "Когда не работает t.me/ - работает tgo.to/";
+            document.getElementsByClassName("m2")[0].innerHTML = "<i>Зачем?</i> - Это удобнее чем вбивать логин в телеграм вручную.";
+            document.getElementsByClassName("m3")[0].innerHTML = "<i>Есть аналоги. Чем <a href='https://tgo.to'>tgo.to</a> лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в телеграм.";
+            document.getElementsByClassName("credits")[0].innerHTML = "Создатель сервиса: <a href="https://tgo.to/cryptohumanbeing">@cryptohumanbeing</a>
+            <br><br>По всем вопросам:<br> <a href="https://tgo.to/nikitashal">@nikitashal</a> с хаштегом #digitalresistance";
+            document.getElementsByClassName("rootLink")[0].innerHTML = "<- на главную";
+        }
+    });
         function goRoot(){
             document.getElementsByClassName("container")[0].classList.add("containerFadeOut");
             setTimeout(function(){window.location.assign("http://tgo.to/");}, 350);
@@ -38,13 +58,13 @@
       <div>
         <h2 class="Logo">Telegram GoTo⚡️</h2>
             <div class="about">
-                <p>
+                <p class="m1">
                 Когда не работает t.me/ - работает tgo.to/
                 </p>
-                <p>
+                <p class="m2">
                   <i>Зачем?</i> - Это удобнее чем вбивать логин в телеграм вручную.
                 </p>
-                <p>
+                <p class="m3">
                   <i>Есть аналоги. Чем <a href="https://tgo.to">tgo.to</a> лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в телеграм. 
                 </p>
             </div>
