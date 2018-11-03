@@ -233,7 +233,7 @@
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].style.color = "#6a7989";}, 2500);
             document.getElementsByClassName("btn_goTestLink")[0].style.display = "block";
             setTimeout(function(){document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";}, 10);
-            document.getElementById("frameTg").src = 'https://t.me/' + document.getElementsByClassName("getinput")[0].value.slice(7) + '/1?embed=1';
+            //document.getElementById("frameTg").src = 'https://t.me/' + document.getElementsByClassName("getinput")[0].value.slice(7) + '/1?embed=1';
         });
         clipboard.on('error', function() {
             document.getElementsByClassName("input__label-content")[0].innerHTML = "Ссылка не скопирована, скопируйте вручную";
