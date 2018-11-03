@@ -90,6 +90,7 @@
             document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkShow");
         }
         if(document.getElementsByClassName("getinput")[0].value.startsWith("tgo.to/")) {
+            document.getElementsByClassName("btn_goTestLink")[0].style.display = "block";
             document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";
         }
     });
@@ -231,7 +232,7 @@
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class='notValid_not'>t.me/</span> или <span class='notValid_not'>@username</span>";}, 2500);
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].style.color = "#6a7989";}, 2500);
             document.getElementsByClassName("btn_goTestLink")[0].style.display = "block";
-            document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";
+            setTimeout(function(){document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";}, 10);
         });
         clipboard.on('error', function() {
             document.getElementsByClassName("input__label-content")[0].innerHTML = "Ссылка не скопирована, скопируйте вручную";
