@@ -1,4 +1,4 @@
-# [Telegram GoTo⚡️](tgo.to)
+# [Telegram GoTo⚡️](https://tgo.to)
 Работающие ссылке телеграм, когда блокируют t.me/
 
 # Описание
