@@ -17,8 +17,8 @@
   var repo = projectPages ? '/' + l.pathname.split('/')[1] : ''
    /* redirect all 404 trafic to index.html */
    function redirect() {
-           if (l.pathname.sptil('/')[1] !== null) {
-        window.location = "tg://resolve?domain=" + l.pathname.slice(1) + '&post=' + l.pathname.sptil('/')[1];
+           if (l.pathname.split('/')[1] !== null) {
+        window.location = "tg://resolve?domain=" + l.pathname.slice(1) + '&post=' + l.pathname.split('/')[1];
      }
      else {
         window.location = "tg://resolve?domain=" + l.pathname.slice(1);
