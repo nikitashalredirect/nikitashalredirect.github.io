@@ -15,7 +15,7 @@
     ],
     "theme_color": "#1e96c8",
     "background_color": "#1e96c8",
-    "start_url": "tgo.to",
+    "start_url": "/",
     "display": "standalone",
     "orientation": "portrait"
 }
