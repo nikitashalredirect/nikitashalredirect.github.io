@@ -203,9 +203,16 @@
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
         if (currentLink.startsWith("t.me/")) {
-            var l = 'https://' + currentLink;
-            l = new URL(l).pathname
-            document.getElementsByClassName("getinput")[0].value = 'tgo.to' + l;
+            if (currentLink.slice('/')[3] !== null) {
+                var l = 'https://' + currentLink;
+                l = new URL(l).pathname
+                document.getElementsByClassName("getinput")[0].value = 'tgo.to' + l + '/' + currentLink.slice('/')[3];     
+            }
+            else {
+                var l = 'https://' + currentLink;
+                l = new URL(l).pathname
+                document.getElementsByClassName("getinput")[0].value = 'tgo.to' + l;
+            }
             var clipboard = new ClipboardJS('.btn_getLink', {
                 target: function() {
                     return document.getElementsByClassName("getinput")[0];
@@ -215,9 +222,6 @@
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
         if (currentLink.startsWith("tgo.to/")) {
-            var l = 'https://' + currentLink;
-            l = new URL(l).pathname
-            document.getElementsByClassName("getinput")[0].value = 'tgo.to' + l;
             var clipboard = new ClipboardJS('.btn_getLink', {
                 target: function() {
                     return document.getElementsByClassName("getinput")[0];
