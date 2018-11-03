@@ -250,9 +250,19 @@
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
         clipboard.on('success', function() {
-            document.getElementsByClassName("input__label-content")[0].innerHTML = "Ссылка скопирована в буфер обмена";
+            if (getCookie('lang') == 'eng') {
+                document.getElementsByClassName("input__label-content")[0].innerHTML = "Link copied to clipboard";
+            }
+            else {
+                document.getElementsByClassName("input__label-content")[0].innerHTML = "Ссылка скопирована в буфер обмена";
+            }
             document.getElementsByClassName("input__label-content")[0].style.color = "#4BB543";
-            setTimeout(function(){document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class='notValid_not'>t.me/</span> или <span class='notValid_not'>@username</span>";}, 2500);
+            if (getCookie('lang') == 'eng') {
+                setTimeout(function(){document.getElementsByClassName("input__label-content")[0].innerHTML = "Enter link <span class='notValid_not'>t.me/</span> or <span class='notValid_not'>@username</span>";}, 2500);
+            }
+            else {
+                setTimeout(function(){document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class='notValid_not'>t.me/</span> или <span class='notValid_not'>@username</span>";}, 2500);
+            }
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].style.color = "#6a7989";}, 2500);
             document.getElementsByClassName("btn_goTestLink")[0].style.display = "block";
             setTimeout(function(){document.getElementsByClassName("btn_goTestLink")[0].style.opacity = "1";}, 10);
