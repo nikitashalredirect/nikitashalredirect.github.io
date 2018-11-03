@@ -15,7 +15,6 @@
     <meta name="author" content="NikitaShal">
     <meta name="keywords" content="Telegram, Freedom, tgo.to">
     <meta name="description" content="Рабочая телеграм ссылка">
-    <meta name="yandex-verification" content="9514ed2cd535e5da" />
     <meta name="msapplication-TileColor" content="#1e96c8">
     <meta name="theme-color" content="#1e96c8">
     <title>Telegram GoTo⚡️</title>
@@ -111,12 +110,14 @@
             document.getElementsByClassName("btn_getLink")[0].innerHTML = "Get link";
             document.getElementsByClassName("sayHello")[0].innerHTML = "Want to learn more";
             document.getElementsByClassName("btn_goTestLink")[0].innerHTML = "open";
+            document.getElementsByClassName("btn_changeLang")[0].innerHTML = "ru";
         }
         if (getCookie('lang') == 'ru') {
             document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class='notValid_not'>t.me/</span> или <span class='notValid_not'>@username</span>";
             document.getElementsByClassName("btn_getLink")[0].innerHTML = "Получить ссылку";
             document.getElementsByClassName("sayHello")[0].innerHTML = "Хочешь узнать подробнее";
             document.getElementsByClassName("btn_goTestLink")[0].innerHTML = "открыть";
+            document.getElementsByClassName("btn_changeLang")[0].innerHTML = "eng";
         }
     });
     
@@ -287,6 +288,17 @@
         window.location.assign(document.getElementsByClassName("getinput")[0].value.slice(7));
         document.getElementsByClassName("aboutLink")[0].style.display = "none";
     }
+        
+    function changeLang () {
+        if (getCookie('lang') == 'eng') {
+            setCookie('lang', 'ru');
+            window.location.reload();
+        }
+        else {
+            setCookie('lang', 'eng');
+            window.location.reload();
+        }
+    }
     
 (function(l, projectPages) {
 
@@ -345,7 +357,7 @@
         </span>
         </div>
         <div class="box">
-            <button onclick="createLink()" class="btn_getLink">Получить ссылку</button>
+            <button onclick="createLink()" class="btn_getLink()">Получить ссылку</button>
         </div>
     </div>
     <div onmouseover="containerSlideUp()" onmouseleave="containerSlideDown()" onclick="goAbout()" class="aboutLink">
@@ -375,6 +387,15 @@
                  -moz-transition: opacity 0.25s ease-in-out;
                    -o-transition: opacity 0.25s ease-in-out;
                       transition: opacity 0.25s ease-in-out;
+        }
+        .btn_changeLang {
+            position: absolute;
+            float: right;
+            right: 15px;
+            margin-top: -25px;
+            font-size: 14px;
+            color: #6a7989;
+            cursor: pointer;
         }
         
         html, body {
