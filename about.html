@@ -27,6 +27,27 @@
 
     
     <script>
+    function getCookie(cname) {
+        var name = cname + "=",
+            ca = document.cookie.split(';'),
+            i,
+            c,
+            ca_length = ca.length;
+        for (i = 0; i < ca_length; i += 1) {
+            c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) !== -1) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function setCookie(variable, value) {
+        document.cookie = variable + '=' + value + ' ;';
+    }
     window.onload = (function () {
         if (getCookie('lang') == ''){
             setCookie('lang', 'eng');
