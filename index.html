@@ -297,8 +297,8 @@
     <input id="fake_user_name" name="fake_user[name]" style="position:absolute; top:-100px;" type="text" value="Safari Autofill Me">
     <div class="container">
         <div class="box">
-        <span class="input input--kyo right-addon inner-addon">
-            <i class="glyphicon glyphicon-search">kek</i>
+        <span class="input input--kyo goTestLink">
+            <a class="btn_goTestLink">Перейти</a>
             <input class="getinput input__field input__field--kyo" type="search" id="input-19" onblur="colorTextGray()" onfocus="colorTextWhite()" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
@@ -320,24 +320,22 @@
         .clearfix:before, .clearfix:after { content: ''; display: table; }
         .clearfix:after { clear: both; }
         
-        .inner-addon {
-  position: relative;
-}
-
-/* style glyph */
-.inner-addon .glyphicon {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
-}
-
-/* align glyph */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
-
-/* add padding  */
-.left-addon input  { padding-left:  30px; }
-.right-addon input { padding-right: 30px; }
+        .goTestLink {
+          position: relative;
+        }
+        .btn_goTestLink {
+            position: absolute;
+            padding: 8px;
+            font-size: 12px;
+            right: 25px;
+            z-index: 9999999999;
+            opacity: 0;
+            cursor: pointer; 
+              -webkit-transition: opacity 0.25s ease-in-out;
+                 -moz-transition: opacity 0.25s ease-in-out;
+                   -o-transition: opacity 0.25s ease-in-out;
+                      transition: opacity 0.25s ease-in-out;
+        }
         
         html, body {
             position: fixed;
