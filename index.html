@@ -259,6 +259,23 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 10);
             setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
         }
+        if (currentLink.startsWith("https://t.me/joinchat") || currentLink.startsWith("t.me/joinchat")) {
+            if(currentLink.startsWith("https://t.me/joinchat")){
+               var l = currentLink;
+            }
+            else {
+               var l = 'https://' + currentLink;
+            }
+            l = new URL(l).pathname
+            document.getElementsByClassName("getinput")[0].value = 'tgo.to/joinchat/' + l.split('/')[2];
+            var clipboard = new ClipboardJS('.btn_getLink', {
+                target: function() {
+                    return document.getElementsByClassName("getinput")[0];
+                }
+            });
+            setTimeout(function(){document.getElementsByClassName("getinput")[0].blur();}, 10);
+            setCookie('tglink', document.getElementsByClassName("getinput")[0].value);
+        }
         clipboard.on('success', function() {
             if (getCookie('lang') == 'eng') {
                 document.getElementsByClassName("input__label-content")[0].innerHTML = "Link copied to clipboard";
