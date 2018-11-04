@@ -38,7 +38,7 @@
      else {
         window.location = "tg://resolve?domain=" + l.pathname.slice(1);
      }
-     //setTimeout(function(){ window.location.href = "/"; }, 200);
+     setTimeout(function(){ window.location.href = "/"; }, 1000);
    }
   
   
@@ -62,9 +62,5 @@
   /* if current document is 404 page page, redirect to index.html otherwise resolve */
   document.title === 'TelegramGoTo' ? redirect() : resolve()
 }(window.location, window.projectPages || false ))</script>
-</head><body>
-   <div> 
-    <object type="text/html" data="http://t.me/nikitashal">
-    </object>
- </div>  
+</head><body> 
 </body></html>
