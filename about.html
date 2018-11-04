@@ -49,6 +49,14 @@
         document.cookie = variable + '=' + value + ' ;';
     }
     window.onload = (function () {
+        var url = new URL(window.location.href);
+        var c = url.searchParams.get("lang");
+        if (c == 'eng') {
+            setCookie('lang', 'eng');
+        }
+        if (c == 'ru') {
+            setCookie('lang', 'ru');
+        }
         if (getCookie('lang') == ''){
             setCookie('lang', 'eng');
         }
