@@ -32,7 +32,10 @@
               (l.pathname ? 'p=' + l.pathname.replace(/&/g, '~and~').replace(repo, '') : '') +
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
-     if (l.pathname.split('/')[2] !== undefined) {
+     if (l.pathname.sptil('/')[1] == 'joinchat') {
+        window.location = "tg://join?" + l.pathname.split('/')[2];
+     }
+     else if (l.pathname.split('/')[2] !== undefined) {
         window.location = "tg://resolve?domain=" + l.pathname.split('/')[1] + '&post=' + l.pathname.split('/')[2];
      }
      else {
