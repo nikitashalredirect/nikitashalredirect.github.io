@@ -63,12 +63,15 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         var c = url.searchParams.get("lang");
         if (c == 'eng') {
             setCookie('lang', 'eng');
+            window.location.assign("http://tgo.to/about");
         }
         if (c == 'ru') {
             setCookie('lang', 'ru');
+            window.location.assign("http://tgo.to/about");
         }
         if (getCookie('lang') == ''){
             setCookie('lang', 'eng');
+            window.location.assign("http://tgo.to/about");
         }
         if (getCookie('lang') == 'eng') {
             document.getElementsByClassName("m1")[0].innerHTML = "When t.me/ doesn't work - tgo.to/ works";
