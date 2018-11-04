@@ -1,8 +1,9 @@
 # [Telegram GoTo⚡️](https://tgo.to)
-Рабочая ссылка телеграм, когда блокируют t.me/
+**When t.me/ doesn't work - tgo.to/ works**
 
-# Описание
-Напишу позже я ленивый
+# About
+English - [tgo.to/aboutENG](tgo.to/about?eng)
+Русский - [tgo.to/aboutRU](tgo.to/about?ru)
 
 # Список изменений
 v1. Запуск приложения. Работает генерация ссылок на каналы чаты и пользователей.
