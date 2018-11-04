@@ -1,3 +1,13 @@
+<!--
+________  ___  ________  ___  _________  ________  ___       ________  _______   ________  ___  ________  _________  ________  ________   ________  _______      
+|\   ___ \|\  \|\   ____\|\  \|\___   ___\\   __  \|\  \     |\   __  \|\  ___ \ |\   ____\|\  \|\   ____\|\___   ___\\   __  \|\   ___  \|\   ____\|\  ___ \     
+\ \  \_|\ \ \  \ \  \___|\ \  \|___ \  \_\ \  \|\  \ \  \    \ \  \|\  \ \   __/|\ \  \___|\ \  \ \  \___|\|___ \  \_\ \  \|\  \ \  \\ \  \ \  \___|\ \   __/|    
+ \ \  \ \\ \ \  \ \  \  __\ \  \   \ \  \ \ \   __  \ \  \    \ \   _  _\ \  \_|/_\ \_____  \ \  \ \_____  \   \ \  \ \ \   __  \ \  \\ \  \ \  \    \ \  \_|/__  
+  \ \  \_\\ \ \  \ \  \|\  \ \  \   \ \  \ \ \  \ \  \ \  \____\ \  \\  \\ \  \_|\ \|____|\  \ \  \|____|\  \   \ \  \ \ \  \ \  \ \  \\ \  \ \  \____\ \  \_|\ \ 
+   \ \_______\ \__\ \_______\ \__\   \ \__\ \ \__\ \__\ \_______\ \__\\ _\\ \_______\____\_\  \ \__\____\_\  \   \ \__\ \ \__\ \__\ \__\\ \__\ \_______\ \_______\
+    \|_______|\|__|\|_______|\|__|    \|__|  \|__|\|__|\|_______|\|__|\|__|\|_______|\_________\|__|\_________\   \|__|  \|__|\|__|\|__| \|__|\|_______|\|_______|
+                                                                                    \|_________|   \|_________|                                                   
+-->                                                                                                                                                       
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,6 +76,7 @@
             document.getElementsByClassName("m3")[0].innerHTML = "<i>There are analogues. Why <a href='https://tgo.to'>tgo.to</a> is better?</i> - Analogues are forced to watch ads before switching to Telegram.";
             document.getElementsByClassName("credits")[0].innerHTML = "Creator: <a href='https://tgo.to/cryptohumanbeing'>@cryptohumanbeing</a><br><br>For all questions:<br> <a href='https://tgo.to/nikitashal'>@nikitashal</a> with notice #digitalresistance";
             document.getElementsByClassName("rootLink")[0].innerHTML = "<- to main page";
+            document.getElementsByClassName("btn_changeLang")[0].innerHTML = "ru";
         }
         if (getCookie('lang') == 'ru') {
             document.getElementsByClassName("m1")[0].innerHTML = "Когда не работает t.me/ - работает tgo.to/";
@@ -73,18 +84,29 @@
             document.getElementsByClassName("m3")[0].innerHTML = "<i>Есть аналоги. Чем <a href='https://tgo.to'>tgo.to</a> лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в Телеграм.";
             document.getElementsByClassName("credits")[0].innerHTML = "Создатель сервиса: <a href='https://tgo.to/cryptohumanbeing'>@cryptohumanbeing</a><br><br>По всем вопросам:<br> <a href='https://tgo.to/nikitashal'>@nikitashal</a> с пометкой #digitalresistance";
             document.getElementsByClassName("rootLink")[0].innerHTML = "<- на главную";
+            document.getElementsByClassName("btn_changeLang")[0].innerHTML = "eng";
         }
     });
-        function goRoot(){
-            document.getElementsByClassName("container")[0].classList.add("containerFadeOut");
-            setTimeout(function(){window.location.assign("http://tgo.to/");}, 350);
+    function goRoot(){
+        document.getElementsByClassName("container")[0].classList.add("containerFadeOut");
+        setTimeout(function(){window.location.assign("http://tgo.to/");}, 350);
+    }
+    function changeLang () {
+        if (getCookie('lang') == 'eng') {
+            setCookie('lang', 'ru');
+            window.location.reload();
         }
+        else {
+            setCookie('lang', 'eng');
+            window.location.reload();
+        }
+    }
     </script>
 </head>
   <body>
     <div class="container">
       <div>
-        <h2 class="Logo">Telegram GoTo⚡️</h2>
+        <h2 class="Logo">Telegram GoTo⚡️</h2><span class="btn_changeLang" onclick="changeLang()">eng</span>
             <div class="about">
                 <p class="m1">
                 Когда не работает t.me/ - работает tgo.to/
