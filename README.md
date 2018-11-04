@@ -3,6 +3,7 @@
 
 # About
 English - [tgo.to/aboutENG](tgo.to/about?lang=eng)
+
 Русский - [tgo.to/aboutRU](tgo.to/about?lang=ru)
 
 # Список изменений
