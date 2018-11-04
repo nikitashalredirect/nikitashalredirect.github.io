@@ -2,9 +2,9 @@
 **When t.me/ doesn't work - tgo.to/ works**
 
 # About
-English - [tgo.to/aboutENG](tgo.to/about?lang=eng)
+English - [tgo.to/aboutENG](https://tgo.to/about?lang=eng)
 
-Русский - [tgo.to/aboutRU](tgo.to/about?lang=ru)
+Русский - [tgo.to/aboutRU](https://tgo.to/about?lang=ru)
 
 # Список изменений
 v1. Запуск приложения. Работает генерация ссылок на каналы чаты и пользователей.
