@@ -32,7 +32,7 @@
               (l.pathname ? 'p=' + l.pathname.replace(/&/g, '~and~').replace(repo, '') : '') +
               (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
               (l.hash))
-     if (l.pathname.sptil('/')[1] == 'joinchat') {
+     if (l.pathname.split('/')[1] == 'joinchat') {
         window.location = "tg://join?" + l.pathname.split('/')[2];
      }
      else if (l.pathname.split('/')[2] !== undefined) {
