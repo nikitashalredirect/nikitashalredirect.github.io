@@ -304,7 +304,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
     }
      
     const inputfield = document.getElementsByClassName("getinput")[0];
-    node.addEventListener("keydown", function(event) {
+    inputfield.addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
             createLink();
