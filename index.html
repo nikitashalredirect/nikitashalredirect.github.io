@@ -44,6 +44,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         navigator.clipboard.readText()
             .then(text => {
               if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@")) {
+                  console.log(text);
                   document.getElementsByClassName("getinput")[0].value = text;
               }
             })
