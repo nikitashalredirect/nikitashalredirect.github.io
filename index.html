@@ -39,25 +39,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
     </script>
 
     
-    <script>  
-    if (navigator.clipboard) {
-        navigator.clipboard.readText()
-            .then(text => {
-         console.log(text);
-              if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@")) {
-                  console.log(text);
-                  document.getElementsByClassName("getinput")[0].value = text;
-              }
-            })
-            .catch(err => {
-              // maybe user didn't grant access to read from clipboard
-              console.log('Something went wrong', err);
-        });
-
-    } else {
-      // nope 😢. Use execCommand or leave the feature off
-    }     
-
+    <script> 
     let deferredPrompt;
 
     window.addEventListener('beforeinstallprompt', (e) => {
@@ -147,6 +129,24 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             document.getElementsByClassName("btn_goTestLink")[0].innerHTML = "открыть";
             document.getElementsByClassName("btn_changeLang")[0].innerHTML = "eng";
         }
+     
+        if (navigator.clipboard) {
+            navigator.clipboard.readText()
+                .then(text => {
+             console.log(text);
+                  if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@")) {
+                      console.log(text);
+                      document.getElementsByClassName("getinput")[0].value = text;
+                  }
+                })
+                .catch(err => {
+                  // maybe user didn't grant access to read from clipboard
+                  console.log('Something went wrong', err);
+            });
+
+        } else {
+          // nope 😢. Use execCommand or leave the feature off
+        }   
     });
     
     document.addEventListener('gesturestart', function (e) {
