@@ -76,11 +76,18 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         if (getCookie('lang') == 'eng') {
             document.getElementsByClassName("rootLink")[0].innerHTML = "to main page ->";
             document.getElementsByClassName("btn_changeLang")[0].innerHTML = "ru";
-            
+            document.getElementsByClassName("feature1")[0].innerHTML = "When you create a link is automatically copied";
+            document.getElementsByClassName("feature2")[0].innerHTML = "After creating the link, you can immediately open";
+            document.getElementsByClassName("feature3")[0].innerHTML = "The application can be added to the desktop";
+            document.getElementsByClassName("instruction")[0].innerHTML = "Click on the video to play";
         }
         if (getCookie('lang') == 'ru') {
             document.getElementsByClassName("rootLink")[0].innerHTML = "на главную ->";
             document.getElementsByClassName("btn_changeLang")[0].innerHTML = "eng";
+            document.getElementsByClassName("feature1")[0].innerHTML = "При создании ссылка автоматически копируется";
+            document.getElementsByClassName("feature2")[0].innerHTML = "После создания ссылку можно сразу открыть";
+            document.getElementsByClassName("feature3")[0].innerHTML = "Приложение можно добавить на рабочий стол";
+            document.getElementsByClassName("instruction")[0].innerHTML = "Нажимай на видео чтобы запустить";
             
         }
     });
@@ -110,26 +117,27 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         <h2 class="Logo">Telegram GoTo⚡️<span class="btn_changeLang" onclick="changeLang()">eng</span></h2>
             <div class="features">
                 <div class="features-list">
+                    <h3 class="instruction"></h3>
                     <br>
-                    <div class="feature1">
+                    <div>
                         <video onclick="this.paused ? this.play() : this.pause();" autoplay loop>
                           <source src="/createlink.mp4" type="video/mp4" />
                         </video>
-                        <span class="videoDescription">При создании ссылка автоматически копируется</span>
+                        <span class="videoDescription feature1"></span>
                     </div>
                  <br>
-                    <div class="feature2">
+                    <div>
                         <video onclick="this.paused ? this.play() : this.pause();" autoplay loop>
                           <source src="/TestOpen.mp4" type="video/mp4" />
                         </video>
-                        <span class="videoDescription">После создания ссылку можно сразу открыть</span>
+                        <span class="videoDescription feature2"></span>
                     </div>
                  <br>
-                    <div class="feature3">
+                    <div>
                         <video onclick="this.paused ? this.play() : this.pause();" autoplay loop>
                           <source src="/addToHomeScreen.mp4" type="video/mp4" />
                         </video>
-                        <span class="videoDescription">Приложение можно добавить на рабочий стол</span>
+                        <span class="videoDescription feature3"></span>
                     </div>
                 </div>
                 <br>
@@ -168,6 +176,12 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         }
         
         .videoDescription {
+            text-align: center;
+            position: relative;
+            display: block;
+        }
+     
+        h3 {
             text-align: center;
             position: relative;
             display: block;
