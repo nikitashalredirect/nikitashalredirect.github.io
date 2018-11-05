@@ -214,6 +214,13 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             }
         }
     }
+     
+    function enterListen(e) {
+        if (e.keyCode == 13) {
+            createLink();
+            return false;
+        }
+    }
         
     function createLink() {
         var currentLink = document.getElementsByClassName("getinput")[0].value;
@@ -301,13 +308,6 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].innerHTML = "Укажите ссылку <span class='notValid_not'>t.me/</span> или <span class='notValid_not'>@username</span>";}, 2500);
             setTimeout(function(){document.getElementsByClassName("input__label-content")[0].style.color = "#6a7989";}, 2500);
         });
-    }
-     
-    function enterListen(e) {
-        if (e.keyCode == 13) {
-            createLink();
-            return false;
-        }
     }
         
     function containerSlideUp() {
