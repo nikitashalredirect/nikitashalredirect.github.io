@@ -1,0 +1,277 @@
+<!--
+________  ___  ________  ___  _________  ________  ___       ________  _______   ________  ___  ________  _________  ________  ________   ________  _______      
+|\   ___ \|\  \|\   ____\|\  \|\___   ___\\   __  \|\  \     |\   __  \|\  ___ \ |\   ____\|\  \|\   ____\|\___   ___\\   __  \|\   ___  \|\   ____\|\  ___ \     
+\ \  \_|\ \ \  \ \  \___|\ \  \|___ \  \_\ \  \|\  \ \  \    \ \  \|\  \ \   __/|\ \  \___|\ \  \ \  \___|\|___ \  \_\ \  \|\  \ \  \\ \  \ \  \___|\ \   __/|    
+ \ \  \ \\ \ \  \ \  \  __\ \  \   \ \  \ \ \   __  \ \  \    \ \   _  _\ \  \_|/_\ \_____  \ \  \ \_____  \   \ \  \ \ \   __  \ \  \\ \  \ \  \    \ \  \_|/__  
+  \ \  \_\\ \ \  \ \  \|\  \ \  \   \ \  \ \ \  \ \  \ \  \____\ \  \\  \\ \  \_|\ \|____|\  \ \  \|____|\  \   \ \  \ \ \  \ \  \ \  \\ \  \ \  \____\ \  \_|\ \ 
+   \ \_______\ \__\ \_______\ \__\   \ \__\ \ \__\ \__\ \_______\ \__\\ _\\ \_______\____\_\  \ \__\____\_\  \   \ \__\ \ \__\ \__\ \__\\ \__\ \_______\ \_______\
+    \|_______|\|__|\|_______|\|__|    \|__|  \|__|\|__|\|_______|\|__|\|__|\|_______|\_________\|__|\_________\   \|__|  \|__|\|__|\|__| \|__|\|_______|\|_______|
+                                                                                    \|_________|   \|_________|                                                   
+-->                                                                                                                                                       
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1e96c8">
+    <meta name="apple-mobile-web-app-title" content="tgo.to">
+    <meta name="telegram goto" content="tgo.to">
+    <meta name="yandex-verification" content="9514ed2cd535e5da" />
+    <meta name="msapplication-TileColor" content="#1e96c8">
+    <meta name="theme-color" content="#1e96c8">
+    <title>Telegram GoTo About⚡️</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111537010-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111537010-2');
+    </script>
+
+    
+    <script>
+    function getCookie(cname) {
+        var name = cname + "=",
+            ca = document.cookie.split(';'),
+            i,
+            c,
+            ca_length = ca.length;
+        for (i = 0; i < ca_length; i += 1) {
+            c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) !== -1) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function setCookie(variable, value) {
+        document.cookie = variable + '=' + value + ' ;';
+    }
+    window.onload = (function () {
+        var url = new URL(window.location.href);
+        var c = url.searchParams.get("lang");
+        if (c == 'eng') {
+            setCookie('lang', 'eng');
+            window.location.assign("http://tgo.to/features");
+        }
+        if (c == 'ru') {
+            setCookie('lang', 'ru');
+            window.location.assign("http://tgo.to/features");
+        }
+        if (getCookie('lang') == ''){
+            setCookie('lang', 'eng');
+            window.location.assign("http://tgo.to/features");
+        }
+        if (getCookie('lang') == 'eng') {
+            document.getElementsByClassName("m1")[0].innerHTML = "When t.me/ doesn't work - tgo.to/ works";
+            document.getElementsByClassName("m2")[0].innerHTML = "<i>Why?</i> - This is more convenient than typing the login into Telegram manually.";
+            document.getElementsByClassName("m3")[0].innerHTML = "<i>There are analogues. Why <a href='https://tgo.to'>tgo.to</a> is better?</i> - Analogues are forced to watch ads before switching to Telegram.";
+            document.getElementsByClassName("credits")[0].innerHTML = "Creator: <a href='https://tgo.to/cryptohumanbeing'>@cryptohumanbeing</a><br><br>For all questions:<br> <a href='https://tgo.to/nikitashal'>@nikitashal</a> with notice #digitalresistance";
+            document.getElementsByClassName("rootLink")[0].innerHTML = "<- to main page";
+            document.getElementsByClassName("btn_changeLang")[0].innerHTML = "ru";
+        }
+        if (getCookie('lang') == 'ru') {
+            document.getElementsByClassName("m1")[0].innerHTML = "Когда не работает t.me/ - работает tgo.to/";
+            document.getElementsByClassName("m2")[0].innerHTML = "<i>Зачем?</i> - Это удобнее, чем вбивать логин в телеграм вручную.";
+            document.getElementsByClassName("m3")[0].innerHTML = "<i>Есть аналоги. Чем <a href='https://tgo.to'>tgo.to</a> лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в Телеграм.";
+            document.getElementsByClassName("credits")[0].innerHTML = "Создатель сервиса: <a href='https://tgo.to/cryptohumanbeing'>@cryptohumanbeing</a><br><br>По всем вопросам:<br> <a href='https://tgo.to/nikitashal'>@nikitashal</a> с пометкой #digitalresistance";
+            document.getElementsByClassName("rootLink")[0].innerHTML = "<- на главную";
+            document.getElementsByClassName("btn_changeLang")[0].innerHTML = "eng";
+        }
+    });
+    function goRoot(){
+        document.getElementsByClassName("container")[0].classList.add("containerFadeOutRight");
+        setTimeout(function(){window.location.assign("http://tgo.to/");}, 350);
+    }
+    function goAbout(){
+        document.getElementsByClassName("container")[0].classList.add("containerFadeOutLeft");
+        setTimeout(function(){window.location.assign("http://tgo.to/about");}, 350);
+    }
+    function changeLang () {
+        if (getCookie('lang') == 'eng') {
+            setCookie('lang', 'ru');
+            window.location.reload();
+        }
+        else {
+            setCookie('lang', 'eng');
+            window.location.reload();
+        }
+    }
+    </script>
+</head>
+  <body>
+    <div class="container">
+      <div>
+        <h2 class="Logo">Telegram GoTo⚡️<span class="btn_changeLang" onclick="changeLang()">eng</span></h2>
+            <div class="about">
+                <p class="m1">
+                фишки сервиса
+                </p>
+                <p class="m2">
+                  <i>Зачем?</i> - Это удобнее чем вбивать логин в телеграм вручную.
+                </p>
+                <p class="m3">
+                  <i>Есть аналоги. Чем <a href="https://tgo.to">tgo.to</a> лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в телеграм. 
+                </p>
+            </div>
+          <br>
+            <div class="credits">
+                Создатель сервиса: <a href="https://tgo.to/cryptohumanbeing">@cryptohumanbeing</a>
+            <br>
+            <br>
+                По всем вопросам:<br> <a href="https://tgo.to/nikitashal">@nikitashal</a> с хаштегом #digitalresistance
+            </div>
+          <br>
+          <div class="aboutLink" onclick="goAbout()">
+              <- о сайте
+          </div>
+          <div class="rootLink" onclick="goRoot()">
+              на главную ->
+          </div>
+      </div>
+    </div>
+    <style>
+        *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+        .clearfix:before, .clearfix:after { content: ''; display: table; }
+        .clearfix:after { clear: both; }
+        
+        html, body {
+            position: fixed;
+            top: 0; 
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #fff;
+            font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        .container {
+            margin: 0 auto;
+            display: flex; /* establish flex container */
+            flex-direction: column; /* make main-axis vertical */
+            justify-content: center; /* align items vertically, in this case */
+            align-items: center; /* align items horizontally, in this case */
+            overflow: hidden;
+            height:100%;
+        }
+                                                                                                                   
+        .Logo {
+            opacity: 0;
+            animation: fade-in-right ease 0.4s forwards;
+            animation-delay: 0.3s;
+            text-align: center;
+        }
+        
+        .about {
+            opacity: 0;
+            animation: fade-in-right ease 0.4s forwards;
+            animation-delay: 0.5s;
+            margin-left: 7px;
+        }
+        
+        .credits{
+            opacity: 0;
+            animation: fade-in-top ease 0.5s forwards;
+            animation-delay: 0.8s;
+            margin-left: 7px;
+        }
+        
+        .containerFadeOutLeft {
+            animation: fade-out-right ease-in-out 0.7s forwards;
+        }
+        .containerFadeOutRight {
+            animation: fade-out-right ease-in-out 0.7s forwards;
+        }
+        
+        .rootLink {
+            opacity: 0;
+            animation: fade-in-top ease 0.5s forwards;
+            animation-delay: 1s;
+            margin-left: 7px;
+            color: #0073CF;
+            cursor: pointer;
+            float: right;
+            right: 0;
+            display: inline-block;
+        }
+        
+        .aboutLink {
+            opacity: 0;
+            animation: fade-in-top ease 0.5s forwards;
+            animation-delay: 1s;
+            margin-left: 7px;
+            color: #0073CF;
+            cursor: pointer;
+            display: inline-block;
+        }
+     
+        .btn_changeLang {
+            position: absolute;
+            font-size: 14px;
+            top: -15px;
+            color: #0073CF;
+            cursor: pointer;
+        }
+                                                                                                                   
+        @keyframes fade-in-right {
+          from {
+            opacity: 0;
+            transform: translateX(-15px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes fade-in-top {
+          from {
+            opacity: 0;
+            transform: translateY(-25px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes fade-out-right {
+          from {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateX(-130%);
+          }
+        }
+        @keyframes fade-out-left {
+          from {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateX(130%);
+          }
+        }
+        @media only screen and (max-width: 400px) {
+            .about {
+                text-align: center;
+            }
+        }
+    </style>
+  </body>
+</html>
