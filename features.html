@@ -111,12 +111,25 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             <div class="features">
                 <div class="features-list">
                     <div class="feature1">
-                        <video width="300" height="200" autoplay="autoplay">
+                        <video onclick="this.paused ? this.play() : this.pause();" autoplay="autoplay">
                           <source src="/createlink.mp4" type="video/mp4" />
                         </video>
-                        <span class="videoDescription">ну это короче вы создаете ссылку</span>
+                        <span class="videoDescription">При создании ссылка автоматически копируется</span>
+                    </div>
+                    <div class="feature2">
+                        <video onclick="this.paused ? this.play() : this.pause();" autoplay="autoplay">
+                          <source src="/TestOpen.mp4" type="video/mp4" />
+                        </video>
+                        <span class="videoDescription">После создания ссылку можно сразу открыть</span>
+                    </div>
+                    <div class="feature3">
+                        <video onclick="this.paused ? this.play() : this.pause();" autoplay="autoplay">
+                          <source src="/addToHomeScreen.mp4" type="video/mp4" />
+                        </video>
+                        <span class="videoDescription">Приложение можно добавить на рабочий стол</span>
                     </div>
                 </div>
+                <br>
                 <div class="aboutLink" onclick="goAbout()">
                     <- о сайте
                 </div>
@@ -129,6 +142,9 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
         .clearfix:before, .clearfix:after { content: ''; display: table; }
         .clearfix:after { clear: both; }
+        video::-webkit-media-controls-start-playback-button {
+            display: none;
+        }
         
         html, body {
             position: fixed;
@@ -141,6 +157,18 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             height: 100%;
             background-color: #fff;
             font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+     
+        video {
+            height: 80vh;
+            display: block;
+            width: 100%;
+        }
+        
+        .videoDescription {
+            text-align: center;
+            position: relative;
+            display: block;
         }
         
         .container {
