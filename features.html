@@ -79,6 +79,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             document.getElementsByClassName("feature1")[0].innerHTML = "When you create a link is automatically copied";
             document.getElementsByClassName("feature2")[0].innerHTML = "After creating the link, you can immediately open";
             document.getElementsByClassName("feature3")[0].innerHTML = "The application can be added to the desktop";
+            document.getElementsByClassName("feature4")[0].innerHTML = "After the reload, the link will remain in place.";
             document.getElementsByClassName("instruction")[0].innerHTML = "Click on the video to play";
         }
         if (getCookie('lang') == 'ru') {
@@ -87,6 +88,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             document.getElementsByClassName("feature1")[0].innerHTML = "При создании ссылка автоматически копируется";
             document.getElementsByClassName("feature2")[0].innerHTML = "После создания ссылку можно сразу открыть";
             document.getElementsByClassName("feature3")[0].innerHTML = "Приложение можно добавить на рабочий стол";
+            document.getElementsByClassName("feature4")[0].innerHTML = "После перезагрузки ссылка останется на своем месте";
             document.getElementsByClassName("instruction")[0].innerHTML = "Нажимай на видео чтобы запустить";
             
         }
@@ -138,6 +140,14 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
                           <source src="/addToHomeScreen.mp4" type="video/mp4" />
                         </video>
                         <span class="videoDescription feature3"></span>
+                    </div>
+                </div>
+                <br>
+                    <div>
+                        <video onclick="this.paused ? this.play() : this.pause();" autoplay loop>
+                          <source src="/cookie.mp4" type="video/mp4" />
+                        </video>
+                        <span class="videoDescription feature4"></span>
                     </div>
                 </div>
                 <br>
