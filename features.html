@@ -74,20 +74,14 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             window.location.assign("http://tgo.to/features");
         }
         if (getCookie('lang') == 'eng') {
-            document.getElementsByClassName("m1")[0].innerHTML = "Service features";
-            document.getElementsByClassName("m2")[0].innerHTML = "<i>Why?</i> - This is more convenient than typing the login into Telegram manually.";
-            document.getElementsByClassName("m3")[0].innerHTML = "<i>There are analogues. Why <a href='https://tgo.to'>tgo.to</a> is better?</i> - Analogues are forced to watch ads before switching to Telegram.";
-            document.getElementsByClassName("credits")[0].innerHTML = "Creator: <a href='https://tgo.to/cryptohumanbeing'>@cryptohumanbeing</a><br><br>For all questions:<br> <a href='https://tgo.to/nikitashal'>@nikitashal</a> with notice #digitalresistance";
             document.getElementsByClassName("rootLink")[0].innerHTML = "to main page ->";
             document.getElementsByClassName("btn_changeLang")[0].innerHTML = "ru";
+            
         }
         if (getCookie('lang') == 'ru') {
-            document.getElementsByClassName("m1")[0].innerHTML = "Фишки сервиса";
-            document.getElementsByClassName("m2")[0].innerHTML = "<i>Зачем?</i> - Это удобнее, чем вбивать логин в телеграм вручную.";
-            document.getElementsByClassName("m3")[0].innerHTML = "<i>Есть аналоги. Чем <a href='https://tgo.to'>tgo.to</a> лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в Телеграм.";
-            document.getElementsByClassName("credits")[0].innerHTML = "Создатель сервиса: <a href='https://tgo.to/cryptohumanbeing'>@cryptohumanbeing</a><br><br>По всем вопросам:<br> <a href='https://tgo.to/nikitashal'>@nikitashal</a> с пометкой #digitalresistance";
             document.getElementsByClassName("rootLink")[0].innerHTML = "на главную ->";
             document.getElementsByClassName("btn_changeLang")[0].innerHTML = "eng";
+            
         }
     });
     function goRoot(){
@@ -112,35 +106,25 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
 </head>
   <body>
     <div class="container">
-      <div>
+        <div>
         <h2 class="Logo">Telegram GoTo⚡️<span class="btn_changeLang" onclick="changeLang()">eng</span></h2>
-            <div class="about">
-                <p class="m1">
-                фишки сервиса
-                </p>
-                <p class="m2">
-                  <i>Зачем?</i> - Это удобнее чем вбивать логин в телеграм вручную.
-                </p>
-                <p class="m3">
-                  <i>Есть аналоги. Чем <a href="https://tgo.to">tgo.to</a> лучше?</i> - Аналоги вынуждают смотреть рекламу до перехода в телеграм. 
-                </p>
+            <div class="features">
+                <div class="features-list">
+                    <div class="feature1">
+                        <video width="300" height="200" autoplay="autoplay">
+                          <source src="/createlink.mp4" type="video/mp4" />
+                        </video>
+                        <span class="videoDescription">ну это короче вы создаете ссылку</span>
+                    </div>
+                </div>
+                <div class="aboutLink" onclick="goAbout()">
+                    <- о сайте
+                </div>
+                <div class="rootLink" onclick="goRoot()">
+                    на главную ->
+                </div>
             </div>
-          <br>
-            <div class="credits">
-                Создатель сервиса: <a href="https://tgo.to/cryptohumanbeing">@cryptohumanbeing</a>
-            <br>
-            <br>
-                По всем вопросам:<br> <a href="https://tgo.to/nikitashal">@nikitashal</a> с хаштегом #digitalresistance
-            </div>
-          <br>
-          <div class="aboutLink" onclick="goAbout()">
-              <- о сайте
-          </div>
-          <div class="rootLink" onclick="goRoot()">
-              на главную ->
-          </div>
-      </div>
-    </div>
+        </div>
     <style>
         *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
         .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -167,7 +151,6 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             align-items: center; /* align items horizontally, in this case */
             overflow: hidden;
             height:100%;
-            background-image: linear-gradient(to bottom, #ffffff, #dbddf2, #afbee6, #78a2da, #0088cc);
         }
                                                                                                                    
         .Logo {
@@ -177,7 +160,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             text-align: center;
         }
         
-        .about {
+        .features {
             opacity: 0;
             animation: fade-in-right ease 0.4s forwards;
             animation-delay: 0.5s;
