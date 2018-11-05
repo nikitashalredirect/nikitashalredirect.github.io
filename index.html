@@ -106,9 +106,9 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             navigator.clipboard.readText()
                 .then(text => {
              console.log(text);
-                  if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@")) {
-                      console.log(text);
+                  if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@") && currentCookie !== undefined) {
                       document.getElementsByClassName("getinput")[0].value = text;
+                      document.getElementsByClassName("btn_getLink")[0].classList.add("btn_getLinkShow");
                   }
                 })
                 .catch(err => {
