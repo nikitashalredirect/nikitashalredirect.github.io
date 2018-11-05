@@ -303,14 +303,6 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         });
     }
      
-    const inputfield = document.getElementsByClassName("getinput")[0];
-    inputfield.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            createLink();
-        }
-    });
-     
     function enterListen(e) {
         //See notes about 'which' and 'key'
         if (e.keyCode == 13) {
