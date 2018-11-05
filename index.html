@@ -43,7 +43,9 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
     if (navigator.clipboard) {
         navigator.clipboard.readText()
             .then(text => {
-              console.log(text)
+              if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@")) {
+                  document.getElementsByClassName("getinput")[0].value = text;
+              }
             })
             .catch(err => {
               // maybe user didn't grant access to read from clipboard
