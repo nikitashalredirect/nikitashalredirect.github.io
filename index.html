@@ -310,6 +310,14 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             createLink();
         }
     });
+     
+    function enterListen(e) {
+        //See notes about 'which' and 'key'
+        if (e.keyCode == 13) {
+            createLink();
+            return false;
+        }
+    }
         
     function containerSlideUp() {
         document.getElementsByClassName("getinput")[0].blur();
@@ -394,7 +402,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         <span class="input input--kyo goTestLink">
             <a class="btn_changeLang" onclick="changeLang()"></a>
             <a class="btn_goTestLink" onclick="goTestLink()">открыть</a>
-            <input class="getinput input__field input__field--kyo" type="search" id="input-19" onblur="colorTextGray()" onfocus="colorTextWhite()" oninput="cookieMaster()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <input class="getinput input__field input__field--kyo" type="search" id="input-19" onblur="colorTextGray()" onfocus="colorTextWhite()" oninput="cookieMaster()" onkeypress="return enterListen(event)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             <label class="input__label input__label--kyo" for="input-19">
                 <span class="input__label-content input__label-content--kyo">Укажите ссылку <span class="notValid_not">t.me/</span> или <span class="notValid_not">@username</span></span>
             </label>
