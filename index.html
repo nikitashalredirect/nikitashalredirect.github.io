@@ -43,6 +43,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
     if (navigator.clipboard) {
         navigator.clipboard.readText()
             .then(text => {
+         console.log(text);
               if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@")) {
                   console.log(text);
                   document.getElementsByClassName("getinput")[0].value = text;
