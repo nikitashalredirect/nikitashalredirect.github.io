@@ -75,6 +75,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         }
         if (getCookie('lang') == 'eng') {
             document.getElementsByClassName("rootLink")[0].innerHTML = "to main page ->";
+            document.getElementsByClassName("aboutLink")[0].innerHTML = "<- about";
             document.getElementsByClassName("btn_changeLang")[0].innerHTML = "ru";
             document.getElementsByClassName("feature1")[0].innerHTML = "When you create a link is automatically copied";
             document.getElementsByClassName("feature2")[0].innerHTML = "After creating the link, you can immediately open";
@@ -84,6 +85,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         }
         if (getCookie('lang') == 'ru') {
             document.getElementsByClassName("rootLink")[0].innerHTML = "на главную ->";
+            document.getElementsByClassName("aboutLink")[0].innerHTML = "<- о сайте";
             document.getElementsByClassName("btn_changeLang")[0].innerHTML = "eng";
             document.getElementsByClassName("feature1")[0].innerHTML = "При создании ссылка автоматически копируется";
             document.getElementsByClassName("feature2")[0].innerHTML = "После создания ссылку можно сразу открыть";
