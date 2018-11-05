@@ -102,6 +102,23 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         if (getCookie('lang') == ''){
             setCookie('lang', 'eng');
         }
+        if (navigator.clipboard) {
+            navigator.clipboard.readText()
+                .then(text => {
+             console.log(text);
+                  if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@")) {
+                      console.log(text);
+                      document.getElementsByClassName("getinput")[0].value = text;
+                  }
+                })
+                .catch(err => {
+                  // maybe user didn't grant access to read from clipboard
+                  console.log('Something went wrong', err);
+            });
+
+        } else {
+          // nope 😢. Use execCommand or leave the feature off
+        }   
         document.getElementsByClassName("getinput")[0].value = currentCookie;
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't' && !isEmpty(document.getElementsByClassName("getinput")[0].value)) {
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
@@ -129,24 +146,6 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             document.getElementsByClassName("btn_goTestLink")[0].innerHTML = "открыть";
             document.getElementsByClassName("btn_changeLang")[0].innerHTML = "eng";
         }
-     
-        if (navigator.clipboard) {
-            navigator.clipboard.readText()
-                .then(text => {
-             console.log(text);
-                  if (text.startsWith("t.me") || text.startsWith("https://t.me") || text.startsWith("@")) {
-                      console.log(text);
-                      document.getElementsByClassName("getinput")[0].value = text;
-                  }
-                })
-                .catch(err => {
-                  // maybe user didn't grant access to read from clipboard
-                  console.log('Something went wrong', err);
-            });
-
-        } else {
-          // nope 😢. Use execCommand or leave the feature off
-        }   
     });
     
     document.addEventListener('gesturestart', function (e) {
