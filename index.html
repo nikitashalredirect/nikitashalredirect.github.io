@@ -40,6 +40,20 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
 
     
     <script>  
+    if (navigator.clipboard) {
+        navigator.clipboard.readText()
+            .then(text => {
+              console.log(text)
+            })
+            .catch(err => {
+              // maybe user didn't grant access to read from clipboard
+              console.log('Something went wrong', err);
+        });
+
+    } else {
+      // nope 😢. Use execCommand or leave the feature off
+    }     
+
     let deferredPrompt;
 
     window.addEventListener('beforeinstallprompt', (e) => {
