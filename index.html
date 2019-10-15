@@ -191,12 +191,22 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         var i;
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't' && !isEmpty(document.getElementsByClassName("getinput")[0].value)) {
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+             if(matchMedia('(prefers-color-scheme: dark)').matches) {
+               document.getElementsByClassName("notValid_not")[i].style.color = "#ededed;";
+              }
+              else {
                 document.getElementsByClassName("notValid_not")[i].style.color = "#ff0033";
+              }
             }
         }
         else {
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+              if(matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#ededed;";
+              }
+              else {
                 document.getElementsByClassName("notValid_not")[i].style.color = "#6a7989";
+              }
             }
         }
     }
@@ -205,12 +215,22 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         var i;
         if (document.getElementsByClassName("getinput")[0].value.charAt(0) !== '@' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 'h' && document.getElementsByClassName("getinput")[0].value.charAt(0) !== 't' && !isEmpty(document.getElementsByClassName("getinput")[0].value)) {
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+              if(matchMedia('(prefers-color-scheme: dark)').matches) {
+               document.getElementsByClassName("notValid_not")[i].style.color = "#ededed;";
+              }
+              else {
                 document.getElementsByClassName("notValid_not")[i].style.color = "#ff0033";
+              }
             }
         }
         else {
             for (i = 0; i < document.getElementsByClassName("notValid_not").length; i++) {
+              if(matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.getElementsByClassName("notValid_not")[i].style.color = "#ededed;";
+              }
+              else {
                 document.getElementsByClassName("notValid_not")[i].style.color = "#fff";
+              }
             }
         }
     }
@@ -607,7 +627,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
         }
         
         .notValid_not {
-            color: #6a7989;
+            color: rgb(106, 121, 137);
             -webkit-transition: color 0.3s;
             -moz-transition:    color 0.3s;
             -ms-transition:     color 0.3s;
@@ -691,7 +711,7 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
             box-shadow: -4px 2px 20px 2px black;
           }
           .notValid_not {
-             color: #ededed;
+             color: rgb(237, 237, 237);
           }
         }
     </style>
