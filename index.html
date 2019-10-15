@@ -673,7 +673,25 @@ ________  ___  ________  ___  _________  ________  ___       ________  _______  
      
         @media (prefers-color-scheme: dark) {
           html, body {
-            background-color: #000;
+            background-color: #111;
+          }
+          .btn_changeLang,
+          .sayHello,
+          .aboutLink,
+          .input__label,
+          .input__label-content
+          { 
+            color: #ededed;
+          }
+
+          .input__label--kyo::after {
+            background: rgba(0, 53, 94, 0.6);
+          }
+          .container { 
+            box-shadow: -4px 2px 20px 2px black;
+          }
+          .notValid_not {
+             color: #ededed;
           }
         }
     </style>
